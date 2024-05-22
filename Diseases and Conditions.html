@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Symptoms</title>
+    <link rel="stylesheet" href="Diseases and Conditions.css">
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="showprofile.css">
+
+</head>
+
+<body>
+    <script src="home.js" defer></script>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen'></i>
+            <span class="logo navLogo"><a href="#">Health Symptoms</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Health Symptoms</a></span>
+                    <i class='bx bx-x sidebarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="Diseases and Conditions.html">Diseases and Conditions</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+            </div>
+            <div class="make">
+                <div class="">
+                    <button type='button' onclick="popup('profile-popup')">Profile</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="popup-container" id="profile-popup">
+        <div class="login popup">
+            <form method="POST" action="">
+                <h2>
+                    <span>PROFILE</span>
+                    <button type="reset" onclick="popup('profile-popup')">X</button>
+                </h2>
+                <div class="containers">
+                    <img src="" alt="Profile Picture" class="profile-image" id="profileImage">
+                    <div class="profile-info">
+                        <p><strong>Name:</strong> <span id="profileName"></span></p>
+                        <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+                        <p><strong>Occupation:</strong> <span id="profileOccupation"></span></p>
+                        <p><strong>Age:</strong> <span id="profileAge"></span></p>
+                        <p><strong>Gender:</strong> <span id="profileGender"></span></p>
+                    </div>
+                    <div class="action-btns">
+                        <button type="button" onclick="window.location.href='index.php'">Edit</button>
+                        <a href="logout.php">Logout</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+<script src="showprofile.js"></script>
+ <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const filterInput = document.getElementById("symptomFilter");
+            const symptomList = document.getElementById("symptomList");
+            const symptoms = document.querySelectorAll("#symptomList li");
+
+            filterInput.addEventListener("input", function () {
+                const filterText = this.value.toLowerCase();
+                symptoms.forEach(symptom => {
+                    const text = symptom.textContent.toLowerCase();
+                    if (text.includes(filterText)) {
+                        symptom.style.display = "block";
+                    } else {
+                        symptom.style.display = "none";
+                    }
+                });
+            });
+        });
+
+    </script>
+    <div class="boxo">
+        <h2 style="color: #ffffff;">List of Diseases & Health conditions</h2>
+        <input type="text" id="symptomFilter" placeholder="Filter by alphabet...">
+        <div class="boxoall">
+            <div class="symptom">
+                <ul id="symptomList">
+
+                    <li><a href="https://familydoctor.org/condition/abdominal-aortic-aneurysm/">Abdominal Aortic
+                            Aneurysm (AAA)</a></li>
+                    <li><a href="https://familydoctor.org/condition/abnormal-uterine-bleeding/">Abnormal Uterine
+                            Bleeding</a></li>
+                    <li><a href="https://familydoctor.org/condition/acl-injury/">ACL Injury</a></li>
+                    <li><a href="https://familydoctor.org/condition/acne/">Acne</a></li>
+                    <li><a href="https://familydoctor.org/condition/acute-bronchitis/">Acute Bronchitis</a></li>
+                    <li><a href="https://familydoctor.org/condition/addisons-disease/">Addison’s Disease</a></li>
+                    <li><a href="https://familydoctor.org/condition/adhd-in-children/">ADHD in Children: Symptoms,
+                            Diagnosis, and Support</a></li>
+                    <li><a href="https://familydoctor.org/condition/adhesive-capsulitis/">Adhesive Capsulitis
+                            (Frozen Shoulder)</a></li>
+                    <li><a href="https://familydoctor.org/condition/adult-adhd/">Adult ADHD</a></li>
+                    <li><a href="https://familydoctor.org/condition/aids/">AIDS</a></li>
+                    <li><a href="https://familydoctor.org/condition/alcohol-abuse/">Alcohol Abuse</a></li>
+                    <li><a href="https://familydoctor.org/condition/allergic-conjunctivitis/">Allergic
+                            Conjunctivitis</a></li>
+                    <li><a href="https://familydoctor.org/condition/allergic-rhinitis/">Allergic Rhinitis
+                            (Allergies)</a></li>
+                    <li><a href="https://familydoctor.org/condition/alopecia-areata/">Alopecia Areata (AA)</a></li>
+                    <li><a href="https://familydoctor.org/condition/alzheimers-disease/">Alzheimer's Disease</a>
+                    </li>
+                    <li><a href="https://familydoctor.org/condition/amblyopia/">Amblyopia</a></li>
+                    <li><a href="https://familydoctor.org/condition/amenorrhea/">Amenorrhea</a></li>
+                    <li><a href="https://familydoctor.org/condition/anal-fissure/">Anal Fissure</a></li>
+                    <li><a href="https://familydoctor.org/condition/anal-fistulas/">Anal Fistulas</a></li>
+                    <li><a href="https://familydoctor.org/condition/anaphylaxis/">Anaphylaxis</a></li>
+                    <li><a href="https://familydoctor.org/condition/anemia/">Anemia</a></li>
+                    <li><a href="https://familydoctor.org/condition/angina/">Angina</a></li>
+                    <li><a href="https://familydoctor.org/condition/ankle-sprains/">Ankle Sprains</a></li>
+                    <li><a href="https://familydoctor.org/condition/appendicitis/">Appendicitis</a></li>
+                    <li><a href="https://familydoctor.org/condition/arrhythmia/">Arrhythmia</a></li>
+                    <li><a href="https://familydoctor.org/condition/arrhythmogenic-right-ventricular-cardiomyopathy/">Arrhythmogenic
+                            Right Ventricular Cardiomyopathy (ARVC)</a></li>
+                    <li><a href="https://familydoctor.org/condition/aspergers-syndrome/">Asperger's Syndrome</a>
+                    </li>
+                    <li><a href="https://familydoctor.org/condition/asthma/">Asthma</a></li>
+                    <li><a href="https://familydoctor.org/condition/asthma-in-kids/">Asthma in Kids</a></li>
+                    <li><a href="https://familydoctor.org/condition/atherosclerosis/">Atherosclerosis</a></li>
+                    <li><a href="https://familydoctor.org/condition/attention-deficit-hyperactivity-disorder/">Attention-Deficit
+                            Hyperactivity Disorder (ADHD)</a></li>
+                    <li><a href="https://familydoctor.org/condition/autism/">Autism</a></li>
+                    <li><a href="https://familydoctor.org/condition/avian-flu/">Avian Flu</a></li>
+                    <li><a href="https://familydoctor.org/condition/babesiosis/">Babesiosis</a></li>
+                    <li><a href="https://familydoctor.org/condition/bacterial-endocarditis/">Bacterial
+                            Endocarditis</a></li>
+                    <li><a href="https://familydoctor.org/condition/bacterial-vaginosis/">Bacterial Vaginosis
+                            (BV)</a></li>
+                    <li><a href="https://familydoctor.org/condition/barretts-esophagus/">Barrett’s Esophagus</a>
+                    </li>
+                    <li><a href="https://familydoctor.org/condition/bartholins-gland-cyst/">Bartholin's Gland
+                            Cyst</a></li>
+                    <li><a href="https://familydoctor.org/condition/bedbugs/">Bedbugs</a></li>
+                    <li><a href="https://familydoctor.org/condition/bells-palsy/">Bell’s Palsy</a></li>
+                    <li><a href="https://familydoctor.org/condition/benign-breast-conditions/">Benign Breast
+                            Conditions</a></li>
+                    <li><a href="https://familydoctor.org/condition/benign-paroxysmal-positional-vertigo/">Benign
+                            Paroxysmal Positional Vertigo (BPPV)</a></li>
+                    <li><a href="https://familydoctor.org/condition/benign-prostatic-hyperplasia/">Benign Prostatic
+                            Hyperplasia (BPH)</a></li>
+                    <li><a href="https://familydoctor.org/condition/bipolar-disorder/">Bipolar Disorder</a></li>
+                    <li><a href="https://familydoctor.org/condition/bladder-stones/">Bladder Stones</a></li>
+                    <li><a href="https://familydoctor.org/condition/blepharospasm/">Blepharospasm</a></li>
+                    <li><a href="https://familydoctor.org/condition/bloating/">Bloating</a></li>
+                    <li><a href="https://familydoctor.org/condition/blood-clots/">Blood Clots</a></li>
+                    <li><a href="https://familydoctor.org/condition/blood-poisoning/">Blood Poisoning</a></li>
+                    <li><a href="https://familydoctor.org/condition/bone-cancer/">Bone Cancer</a></li>
+                    <li><a href="https://familydoctor.org/condition/breast-cancer/">Breast Cancer</a></li>
+                    <li><a href="https://familydoctor.org/condition/breast-pain-women/">Breast Pain in Women</a>
+                    </li>
+                    <li><a href="https://familydoctor.org/condition/bronchiolitis/">Bronchiolitis</a></li>
+                    <li><a href="https://familydoctor.org/condition/burners/">Burners</a></li>
+                    <li><a href="https://familydoctor.org/condition/burning-mouth-syndrome/">Burning Mouth
+                            Syndrome</a></li>
+                    <li><a href="https://familydoctor.org/condition/bursitis-hip/">Bursitis of the Hip</a></li>
+                    <li><a href="https://familydoctor.org/condition/c-diff-infection/">C. diff (Clostridium
+                            difficile) Infection</a></li>
+                    <li><a href="https://familydoctor.org/condition/cancer/">Cancer</a></li>
+                    <li><a href="https://familydoctor.org/condition/canker-sores/">Canker Sores</a></li>
+                    <li><a href="https://familydoctor.org/condition/cardiomyopathy/">Cardiomyopathy</a></li>
+                    <li><a href="https://familydoctor.org/condition/carpal-tunnel-syndrome/">Carpal Tunnel
+                            Syndrome</a></li>
+                    <li><a href="https://familydoctor.org/condition/cat-scratch-disease/">Cat-Scratch Disease
+                            (Cat-Scratch Fever)</a></li>
+                    <li><a href="https://familydoctor.org/condition/celiac-disease/">Celiac Disease</a></li>
+                    <li><a href="https://familydoctor.org/condition/cellulitis/">Cellulitis</a></li>
+                    <li><a href="https://familydoctor.org/condition/central-precocious-puberty/">Central Precocious
+                            Puberty</a></li>
+                    <li><a href="https://familydoctor.org/condition/cerebral-palsy/">Cerebral Palsy</a></li>
+                    <li><a href="https://familydoctor.org/condition/cervical-cancer/">Cervical Cancer</a></li>
+                    <li><a href="https://familydoctor.org/condition/cervical-dysplasia/">Cervical Dysplasia</a></li>
+                    <li><a href="https://familydoctor.org/condition/cervical-dystonia/">Cervical Dystonia</a></li>
+                    <li><a href="https://familydoctor.org/condition/cervical-spondylotic-myelopathy/">Cervical
+                            Spondylotic Myelopathy (CSM)</a></li>
+                    <li><a href="https://familydoctor.org/condition/chickenpox/">Chickenpox</a></li>
+                    <li><a href="https://familydoctor.org/condition/chlamydia/">Chlamydia</a></li>
+                    <li><a href="https://familydoctor.org/condition/chronic-bronchitis/">Chronic Bronchitis</a></li>
+                    <li><a href="https://familydoctor.org/condition/chronic-cough/">Chronic Cough</a></li>
+                    <li><a href="https://familydoctor.org/condition/chronic-fatigue-syndrome/">Chronic Fatigue
+                            Syndrome</a></li>
+                    <li><a href="https://familydoctor.org/condition/chronic-kidney-disease/">Chronic Kidney Disease
+                            (CKD)</a></li>
+                    <li><a href="https://familydoctor.org/condition/chronic-obstructive-pulmonary-disease/">Chronic
+                            Obstructive Pulmonary Disease (COPD)</a></li>
+                    <li><a href="https://familydoctor.org/condition/chronic-pain/">Chronic Pain</a></li>
+                    <li><a href="https://familydoctor.org/condition/chronic-pelvic-pain/">Chronic Pelvic Pain</a>
+                    </li>
+                    <li><a href="https://familydoctor.org/condition/cirrhosis-portal-hypertension/">Cirrhosis and
+                            Portal Hypertension</a></li>
+                    <li><a href="https://familydoctor.org/condition/cleft-lip-cleft-palate/">Cleft Lip and Cleft
+                            Palate</a></li>
+                    <li><a href="https://familydoctor.org/condition/club-drug-use/">Club Drug Use</a></li>
+                    <li><a href="https://familydoctor.org/condition/clubfoot/">Clubfoot</a></li>
+                    <li><a href="https://familydoctor.org/condition/colds-flu/">Colds and the Flu</a></li>
+                    <li><a href="https://familydoctor.org/condition/colic/">Colic</a></li>
+                    <li><a href="https://familydoctor.org/condition/colorectal-cancer/">Colorectal Cancer</a></li>
+                    <li><a href="https://familydoctor.org/condition/complex-regional-pain-syndrome/">Complex
+                            Regional Pain Syndrome</a></li>
+                    <li><a href="https://familydoctor.org/condition/concussion/">Concussion</a></li>
+                    <li><a href="https://familydoctor.org/condition/congenital-adrenal-hyperplasia/">Congenital
+                            Adrenal Hyperplasia</a></li>
+                    <li><a href="https://familydoctor.org/condition/congenital-heart-disease/">Congenital Heart
+                            Disease</a></li>
+                    <li><a href="https://familydoctor.org/condition/constipation/">Constipation</a></li>
+                    <li><a href="https://familydoctor.org/condition/corneal-abrasions/">Corneal Abrasions</a></li>
+                    <li><a href="https://familydoctor.org/condition/coronary-artery-disease/">Coronary Artery
+                            Disease (CAD)</a></li>
+                    <li><a href="https://familydoctor.org/condition/coronavirus/">Coronavirus (COVID-19)</a></li>
+                    <li><a href="https://familydoctor.org/condition/coronavirus-2019/">Coronavirus Disease 2019
+                            (COVID-19)</a></li>
+                    <li><a href="https://familydoctor.org/condition/crohns-disease/">Crohn’s Disease</a></li>
+                    <li><a href="https://familydoctor.org/condition/croup/">Croup</a></li>
+                    <li><a href="https://familydoctor.org/condition/cushings-syndrome/">Cushing's Syndrome</a></li>
+                    <li><a href="https://familydoctor.org/condition/cystic-fibrosis/">Cystic Fibrosis (CF)</a></li>
+                    <li><a href="https://familydoctor.org/condition/cytomegalovirus/">Cytomegalovirus</a></li>
+                    <li><a href="https://familydoctor.org/condition/de-quervains-tenosynovitis/">De Quervain’s
+                            Tenosynovitis</a></li>
+                    <li><a href="https://familydoctor.org/condition/deep-vein-thrombosis/">Deep Vein Thrombosis</a>
+                    </li>
+                    <li><a href="https://familydoctor.org/condition/dementia/">Dementia</a></li>
+                    <li><a href="https://familydoctor.org/condition/depression/">Depression</a></li>
+                    <li><a href="https://familydoctor.org/condition/diabetes/">Diabetes</a></li>
+                    <li><a href="https://familydoctor.org/condition/diabetes-kids-signs-causes/">Diabetes in Kids -
+                            Signs and Causes</a></li>
+                    <li><a href="https://familydoctor.org/condition/diabetes-insipidus/">Diabetes Insipidus</a></li>
+                    <li><a href="https://familydoctor.org/condition/diabetic-ketoacidosis/">Diabetic
+                            Ketoacidosis</a></li>
+                    <li><a href="https://familydoctor.org/condition/diabetic-nephropathy/">Diabetic Nephropathy</a>
+                    </li>
+                    <li><a href="https://familydoctor.org/condition/diabetic-neuropathy/">Diabetic Neuropathy</a>
+                    </li>
+                    <li><a href="https://familydoctor.org/condition/diabetic-retinopathy/">Diabetic Retinopathy</a>
+                    </li>
+                    <li><a href="https://familydoctor.org/condition/diaper-rash/">Diaper Rash</a></li>
+                </ul>
+            </div>
+            <div class="symptom2">
+                <div>
+                    <ul id="symptomList">
+
+
+                        <li><a href="https://familydoctor.org/condition/diverticular-disease/">Diverticular Disease
+                                (Diverticulitis)</a></li>
+                        <li><a href="https://familydoctor.org/condition/bipolar-disorder/">Bipolar Disorder</a></li>
+                        <li><a href="https://familydoctor.org/condition/down-syndrome/">Down Syndrome</a></li>
+                        <li><a href="https://familydoctor.org/condition/dysmenorrhea/">Dysmenorrhea</a></li>
+                        <li><a href="https://familydoctor.org/condition/dysphagia/">Dysphagia</a></li>
+                        <li><a href="https://familydoctor.org/condition/e-coli-infection/">E. coli Infection</a></li>
+                        <li><a href="https://familydoctor.org/condition/ear-infection/">Ear Infection</a></li>
+                        <li><a href="https://familydoctor.org/condition/early-pregnancy-loss/">Early Pregnancy Loss</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/eating-disorders/">Eating Disorders</a></li>
+                        <li><a href="https://familydoctor.org/condition/ebola-virus-disease/">Ebola Virus Disease</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/echinococcosis/">Echinococcosis</a></li>
+                        <li><a href="https://familydoctor.org/condition/ectopic-pregnancy/">Ectopic Pregnancy</a></li>
+                        <li><a href="https://familydoctor.org/condition/eczema-and-atopic-dermatitis/">Eczema and Atopic
+                                Dermatitis</a></li>
+                        <li><a href="https://familydoctor.org/condition/edema/">Edema</a></li>
+                        <li><a href="https://familydoctor.org/condition/endometrial-cancer/">Endometrial Cancer</a></li>
+                        <li><a href="https://familydoctor.org/condition/endometrial-hyperplasia/">Endometrial
+                                Hyperplasia</a></li>
+                        <li><a href="https://familydoctor.org/condition/endometriosis/">Endometriosis</a></li>
+                        <li><a href="https://familydoctor.org/condition/enlarged-adenoids/">Enlarged Adenoids</a></li>
+                        <li><a href="https://familydoctor.org/condition/epilepsy/">Epilepsy</a></li>
+                        <li><a href="https://familydoctor.org/condition/eosinophilic-esophagitis/">Eosinophilic
+                                Esophagitis</a></li>
+                        <li><a href="https://familydoctor.org/condition/erectile-dysfunction/">Erectile Dysfunction
+                                (ED)</a></li>
+                        <li><a
+                                href="https://familydoctor.org/condition/esophageal-atresia-and-tracheoesophageal-fistula/">Esophageal
+                                Atresia and Tracheoesophageal Fistula</a></li>
+                        <li><a href="https://familydoctor.org/condition/essential-tremor/">Essential Tremor</a></li>
+                        <li><a href="https://familydoctor.org/condition/eustachian-tube-dysfunction/">Eustachian Tube
+                                Dysfunction</a></li>
+                        <li><a href="https://familydoctor.org/condition/exercise-induced-bronchospasm/">Exercise-induced
+                                Bronchospasm</a></li>
+                        <li><a href="https://familydoctor.org/condition/exercise-induced-urticaria/">Exercise-induced
+                                Urticaria</a></li>
+                        <li><a href="https://familydoctor.org/condition/fainting/">Fainting</a></li>
+                        <li><a href="https://familydoctor.org/condition/febrile-seizures/">Febrile Seizures</a></li>
+                        <li><a href="https://familydoctor.org/condition/fecal-incontinence/">Fecal Incontinence</a></li>
+                        <li><a href="https://familydoctor.org/condition/female-athlete-triad/">Female Athlete Triad</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/fetal-alcohol-syndrome/">Fetal Alcohol
+                                Syndrome</a></li>
+                        <li><a href="https://familydoctor.org/condition/fetal-growth-restriction/">Fetal Growth
+                                Restriction</a></li>
+                        <li><a href="https://familydoctor.org/condition/fever-in-infants-and-children/">Fever in Infants
+                                and Children</a></li>
+                        <li><a href="https://familydoctor.org/condition/fibromyalgia/">Fibromyalgia</a></li>
+                        <li><a href="https://familydoctor.org/condition/fifth-disease/">Fifth Disease</a></li>
+                        <li><a href="https://familydoctor.org/condition/flat-feet/">Flat Feet</a></li>
+                        <li><a href="https://familydoctor.org/condition/flatulence-gas/">Flatulence/Gas</a></li>
+                        <li><a href="https://familydoctor.org/condition/food-allergies/">Food Allergies</a></li>
+                        <li><a href="https://familydoctor.org/condition/food-poisoning/">Food Poisoning</a></li>
+                        <li><a href="https://familydoctor.org/condition/food-poisoning-mushroom-poisoning/">Food
+                                Poisoning | Mushroom Poisoning</a></li>
+                        <li><a href="https://familydoctor.org/condition/fragile-x-syndrome/">Fragile X Syndrome</a></li>
+                        <li><a href="https://familydoctor.org/condition/galactorrhea/">Galactorrhea</a></li>
+                        <li><a href="https://familydoctor.org/condition/gallstones/">Gallstones</a></li>
+                        <li><a href="https://familydoctor.org/condition/gastroparesis/">Gastroparesis</a></li>
+                        <li><a href="https://familydoctor.org/condition/generalized-anxiety-disorder/">Generalized
+                                Anxiety Disorder</a></li>
+                        <li><a href="https://familydoctor.org/condition/genital-warts/">Genital Warts</a></li>
+                        <li><a href="https://familydoctor.org/condition/gestational-diabetes/">Gestational Diabetes</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/heart-murmurs/">Heart Murmurs</a></li>
+                        <li><a href="https://familydoctor.org/condition/heart-palpitations/">Heart Palpitations</a></li>
+                        <li><a href="https://familydoctor.org/condition/heartburn/">Heartburn</a></li>
+                        <li><a href="https://familydoctor.org/condition/heat-exhaustion-and-heat-stroke/">Heat
+                                Exhaustion and Heat Stroke</a></li>
+                        <li><a href="https://familydoctor.org/condition/heat-rash/">Heat Rash</a></li>
+                        <li><a href="https://familydoctor.org/condition/hellp-syndrome/">HELLP Syndrome</a></li>
+                        <li><a href="https://familydoctor.org/condition/hemolytic-uremic-syndrome/">Hemolytic Uremic
+                                Syndrome</a></li>
+                        <li><a href="https://familydoctor.org/condition/hemorrhoids/">Hemorrhoids</a></li>
+                        <li><a href="https://familydoctor.org/condition/henoch-schonlein-purpura/">Henoch-Schönlein
+                                Purpura</a></li>
+                        <li><a href="https://familydoctor.org/condition/hepatitis-a/">Hepatitis A</a></li>
+                        <li><a href="https://familydoctor.org/condition/hepatitis-b/">Hepatitis B</a></li>
+                        <li><a href="https://familydoctor.org/condition/hepatitis-c/">Hepatitis C</a></li>
+                        <li><a href="https://familydoctor.org/condition/hereditary-hemochromatosis/">Hereditary
+                                Hemochromatosis</a></li>
+                        <li><a href="https://familydoctor.org/condition/hernia/">Hernia</a></li>
+                        <li><a href="https://familydoctor.org/condition/herniated-disc/">Herniated Disc</a></li>
+                        <li><a href="https://familydoctor.org/condition/herpes/">Herpes</a></li>
+                        <li><a href="https://familydoctor.org/condition/hidradenitis-suppurativa/">Hidradenitis
+                                Suppurativa</a></li>
+                        <li><a href="https://familydoctor.org/condition/high-blood-pressure/">High Blood Pressure</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/high-blood-pressure-during-pregnancy/">High
+                                Blood Pressure During Pregnancy</a></li>
+                        <li><a href="https://familydoctor.org/condition/high-cholesterol/">High Cholesterol</a></li>
+                        <li><a href="https://familydoctor.org/condition/high-altitude-illness/">High-Altitude
+                                Illness</a></li>
+                        <li><a href="https://familydoctor.org/condition/hip-fractures/">Hip Fractures</a></li>
+                        <li><a href="https://familydoctor.org/condition/hip-problems-infants/">Hip Problems in
+                                Infants</a></li>
+                        <li><a href="https://familydoctor.org/condition/hirschsprungs-disease/">Hirschsprung’s
+                                Disease</a></li>
+                        <li><a href="https://familydoctor.org/condition/hirsutism/">Hirsutism</a></li>
+                        <li><a href="https://familydoctor.org/condition/hiv/">HIV</a></li>
+                        <li><a href="https://familydoctor.org/condition/hives-urticaria/">Hives (Urticaria)</a></li>
+                        <li><a href="https://familydoctor.org/condition/human-papillomavirus-hpv/">Human Papillomavirus
+                                (HPV)</a></li>
+                        <li><a href="https://familydoctor.org/condition/huntingtons-disease/">Huntington's Disease</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/hypercoagulation/">Hypercoagulation</a></li>
+                        <li><a href="https://familydoctor.org/condition/hyperhidrosis/">Hyperhidrosis</a></li>
+                        <li><a href="https://familydoctor.org/condition/hyperparathyroidism/">Hyperparathyroidism</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/hyperthyroidism/">Hyperthyroidism</a></li>
+                        <li><a href="https://familydoctor.org/condition/hypopituitarism/">Hypopituitarism</a></li>
+                        <li><a href="https://familydoctor.org/condition/hypothermia/">Hypothermia</a></li>
+                        <li><a href="https://familydoctor.org/condition/hypothyroidism/">Hypothyroidism</a></li>
+                        <li><a href="https://familydoctor.org/condition/idiopathic-thrombocytopenic-purpura-itp/">Idiopathic
+                                Thrombocytopenic Purpura (ITP)</a></li>
+                        <li><a href="https://familydoctor.org/condition/indigestion-dyspepsia/">Indigestion
+                                (Dyspepsia)</a></li>
+                        <li><a href="https://familydoctor.org/condition/infant-jaundice/">Infant Jaundice</a></li>
+                        <li><a href="https://familydoctor.org/condition/infertility/">Infertility</a></li>
+                        <li><a href="https://familydoctor.org/condition/inflammatory-bowel-disease-ibd/">Inflammatory
+                                Bowel Disease (IBD)</a></li>
+                        <li><a href="https://familydoctor.org/condition/ingrown-toenails/">Ingrown Toenails</a></li>
+                        <li><a href="https://familydoctor.org/condition/inhalant-use/">Inhalant Use</a></li>
+                        <li><a href="https://familydoctor.org/condition/insect-borne-diseases/">Insect-borne
+                                Diseases</a></li>
+                        <li><a href="https://familydoctor.org/condition/insomnia/">Insomnia</a></li>
+                        <li><a href="https://familydoctor.org/condition/insulin-resistance/">Insulin Resistance</a></li>
+                        <li><a href="https://familydoctor.org/condition/interstitial-cystitis/">Interstitial
+                                Cystitis</a></li>
+                        <li><a href="https://familydoctor.org/condition/interstitial-nephritis/">Interstitial
+                                Nephritis</a></li>
+                        <li><a href="https://familydoctor.org/condition/intertrigo/">Intertrigo</a></li>
+                        <li><a href="https://familydoctor.org/condition/intoeing/">Intoeing</a></li>
+                        <li><a href="https://familydoctor.org/condition/intussusception/">Intussusception</a></li>
+                        <li><a href="https://familydoctor.org/condition/irritable-bowel-syndrome-ibs/">Irritable Bowel
+                                Syndrome (IBS)</a></li>
+                        <li><a href="https://familydoctor.org/condition/jock-itch/">Jock Itch</a></li>
+                        <li><a href="https://familydoctor.org/condition/juvenile-rheumatoid-arthritis/">Juvenile
+                                Rheumatoid Arthritis</a></li>
+                        <li><a href="https://familydoctor.org/condition/keloids-raised-scars/">Keloids (Raised
+                                Scars)</a></li>
+                        <li><a href="https://familydoctor.org/condition/keratosis-pilaris/">Keratosis Pilaris</a></li>
+                        <li><a href="https://familydoctor.org/condition/kidney-cysts/">Kidney Cysts</a></li>
+                        <li><a href="https://familydoctor.org/condition/kidney-infection-symptoms-treatment/">Kidney
+                                Infection Symptoms and Treatment</a></li>
+                        <li><a href="https://familydoctor.org/condition/kidney-stones/">Kidney Stones</a></li>
+                        <li><a href="https://familydoctor.org/condition/labyrinthitis/">Labyrinthitis</a></li>
+                        <li><a href="https://familydoctor.org/condition/lactose-intolerance/">Lactose Intolerance</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/latex-allergy/">Latex Allergy</a></li>
+                        <li><a href="https://familydoctor.org/condition/leprosy/">Leprosy</a></li>
+                        <li><a href="https://familydoctor.org/condition/leukemia/">Leukemia</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="symptom">
+
+                <div>
+                    <ul id="symptomList">
+
+                        <li><a href="https://familydoctor.org/condition/lichen-planus/">Lichen Planus</a></li>
+                        <li><a href="https://familydoctor.org/condition/lichen-sclerosus/">Lichen Sclerosus</a></li>
+                        <li><a href="https://familydoctor.org/condition/lipomas/">Lipomas</a></li>
+                        <li><a href="https://familydoctor.org/condition/long-covid/">Long COVID</a></li>
+                        <li><a href="https://familydoctor.org/condition/low-back-pain/">Low Back Pain</a></li>
+                        <li><a href="https://familydoctor.org/condition/lumbar-spinal-canal-stenosis/">Lumbar Spinal
+                                Canal Stenosis</a></li>
+                        <li><a href="https://familydoctor.org/condition/lung-cancer/">Lung Cancer</a></li>
+                        <li><a href="https://familydoctor.org/condition/lupus/">Lupus</a></li>
+                        <li><a href="https://familydoctor.org/condition/lyme-disease/">Lyme Disease</a></li>
+                        <li><a href="https://familydoctor.org/condition/lymphedema/">Lymphedema</a></li>
+                        <li><a href="https://familydoctor.org/condition/mad-cow-disease/">Mad Cow Disease</a></li>
+                        <li><a href="https://familydoctor.org/condition/malaria/">Malaria</a></li>
+                        <li><a href="https://familydoctor.org/condition/male-breast-cancer/">Male Breast Cancer</a></li>
+                        <li><a href="https://familydoctor.org/condition/mallet-finger/">Mallet Finger</a></li>
+                        <li><a href="https://familydoctor.org/condition/mass-psychogenic-illness/">Mass Psychogenic
+                                Illness</a></li>
+                        <li><a href="https://familydoctor.org/condition/mastitis/">Mastitis</a></li>
+                        <li><a href="https://familydoctor.org/condition/mastocytosis/">Mastocytosis</a></li>
+                        <li><a href="https://familydoctor.org/condition/measles/">Measles</a></li>
+                        <li><a href="https://familydoctor.org/condition/meckels-diverticulum/">Meckel's Diverticulum</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/meconium-aspiration-syndrome-mas/">Meconium
+                                Aspiration Syndrome (MAS)</a></li>
+                        <li><a href="https://familydoctor.org/condition/melasma/">Melasma</a></li>
+                        <li><a href="https://familydoctor.org/condition/menieres-disease/">Meniere’s Disease</a></li>
+                        <li><a href="https://familydoctor.org/condition/meningitis/">Meningitis</a></li>
+                        <li><a href="https://familydoctor.org/condition/menopause/">Menopause</a></li>
+                        <li><a href="https://familydoctor.org/condition/metabolic-syndrome/">Metabolic Syndrome</a></li>
+                        <li><a
+                                href="https://familydoctor.org/condition/methicillin-resistant-staphylococcus-aureus-mrsa/">Methicillin-resistant
+                                Staphylococcus aureus (MRSA)</a></li>
+                        <li><a href="https://familydoctor.org/condition/microscopic-hematuria/">Microscopic
+                                Hematuria</a></li>
+                        <li><a href="https://familydoctor.org/condition/migraines/">Migraines</a></li>
+                        <li><a href="https://familydoctor.org/condition/mitral-valve-prolapse/">Mitral Valve
+                                Prolapse</a></li>
+                        <li><a href="https://familydoctor.org/condition/mononucleosis/">Mononucleosis</a></li>
+                        <li><a href="https://familydoctor.org/condition/morning-sickness/">Morning Sickness</a></li>
+                        <li><a href="https://familydoctor.org/condition/motion-sickness/">Motion Sickness</a></li>
+                        <li><a href="https://familydoctor.org/condition/mpox-monkeypox/">Mpox (Monkeypox)</a></li>
+                        <li><a href="https://familydoctor.org/condition/multiple-myeloma/">Multiple Myeloma</a></li>
+                        <li><a href="https://familydoctor.org/condition/multiple-sclerosis/">Multiple Sclerosis</a></li>
+                        <li><a href="https://familydoctor.org/condition/mumps/">Mumps</a></li>
+                        <li><a href="https://familydoctor.org/condition/munchausen-syndrome-by-proxy/">Munchausen
+                                Syndrome by Proxy</a></li>
+                        <li><a href="https://familydoctor.org/condition/muscular-dystrophy/">Muscular Dystrophy</a></li>
+                        <li><a href="https://familydoctor.org/condition/nail-fungal-infections/">Nail Fungal
+                                Infections</a></li>
+                        <li><a href="https://familydoctor.org/condition/nasopharyngeal-cancer/">Nasopharyngeal
+                                Cancer</a></li>
+                        <li><a href="https://familydoctor.org/condition/necrotizing-enterocolitis/">Necrotizing
+                                Enterocolitis</a></li>
+                        <li><a href="https://familydoctor.org/condition/neonatal-abstinence-syndrome/">Neonatal
+                                Abstinence Syndrome</a></li>
+                        <li><a href="https://familydoctor.org/condition/neural-tube-defects/">Neural Tube Defects</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/neurofibromatosis/">Neurofibromatosis</a></li>
+                        <li><a href="https://familydoctor.org/condition/nightmares-and-night-terrors/">Nightmares and
+                                Night Terrors</a></li>
+                        <li><a href="https://familydoctor.org/condition/non-hodgkin-lymphoma/">Non-Hodgkin Lymphoma</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/non-substance-addiction/">Non-substance
+                                Addiction</a></li>
+                        <li><a href="https://familydoctor.org/condition/nonalcoholic-fatty-liver-disease/">Nonalcoholic
+                                Fatty Liver Disease (Metabolic dysfunction-associated steatotic liver disease)</a></li>
+                        <li><a href="https://familydoctor.org/condition/nosebleeds/">Nosebleeds</a></li>
+                        <li><a href="https://familydoctor.org/condition/obesity/">Obesity</a></li>
+                        <li><a href="https://familydoctor.org/condition/obsessive-compulsive-disorder/">Obsessive-Compulsive
+                                Disorder</a></li>
+                        <li><a href="https://familydoctor.org/condition/occupational-respiratory-disease/">Occupational
+                                Respiratory Disease</a></li>
+                        <li><a href="https://familydoctor.org/condition/opioid-addiction/">Opioid Addiction</a></li>
+                        <li><a href="https://familydoctor.org/condition/oppositional-defiant-disorder/">Oppositional
+                                Defiant Disorder</a></li>
+                        <li><a href="https://familydoctor.org/condition/organic-acid-metabolism-disorders/">Organic Acid
+                                Metabolism Disorders</a></li>
+                        <li><a href="https://familydoctor.org/condition/osgood-schlatter-disease/">Osgood-Schlatter
+                                Disease</a></li>
+                        <li><a href="https://familydoctor.org/condition/osteoarthritis/">Osteoarthritis</a></li>
+                        <li><a href="https://familydoctor.org/condition/osteochondritis-dissecans/">Osteochondritis
+                                Dissecans</a></li>
+                        <li><a href="https://familydoctor.org/condition/osteopenia/">Osteopenia</a></li>
+                        <li><a href="https://familydoctor.org/condition/osteoporosis/">Osteoporosis</a></li>
+                        <li><a href="https://familydoctor.org/condition/osteosarcoma/">Osteosarcoma</a></li>
+                        <li><a href="https://familydoctor.org/condition/otitis-externa/">Otitis Externa (Swimmer's
+                                Ear)</a></li>
+                        <li><a href="https://familydoctor.org/condition/otitis-media-with-effusion/">Otitis Media (with
+                                Effusion)</a></li>
+                        <li><a href="https://familydoctor.org/condition/ovarian-cancer/">Ovarian Cancer</a></li>
+                        <li><a href="https://familydoctor.org/condition/ovarian-cyst/">Ovarian Cyst</a></li>
+                        <li><a href="https://familydoctor.org/condition/overactive-bladder/">Overactive Bladder</a></li>
+                        <li><a href="https://familydoctor.org/condition/pancreatic-cancer/">Pancreatic Cancer</a></li>
+                        <li><a href="https://familydoctor.org/condition/pancreatitis/">Pancreatitis</a></li>
+                        <li><a href="https://familydoctor.org/condition/panic-disorder-and-panic-attacks/">Panic
+                                Disorder and Panic Attacks</a></li>
+                        <li><a href="https://familydoctor.org/condition/paraphimosis/">Paraphimosis</a></li>
+                        <li><a href="https://familydoctor.org/condition/parkinsons-disease/">Parkinson’s Disease</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/paronychia/">Paronychia</a></li>
+                        <li><a href="https://familydoctor.org/condition/patellofemoral-pain-syndrome/">Patellofemoral
+                                Pain Syndrome</a></li>
+                        <li><a href="https://familydoctor.org/condition/pelvic-floor-disorders/">Pelvic Floor
+                                Disorders</a></li>
+                        <li><a href="https://familydoctor.org/condition/pelvic-inflammatory-disease/">Pelvic
+                                Inflammatory Disease</a></li>
+                        <li><a href="https://familydoctor.org/condition/peptic-ulcer-disease/">Peptic Ulcer Disease</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/perimenopause/">Perimenopause</a></li>
+                        <li><a href="https://familydoctor.org/condition/peripheral-arterial-disease-claudication/">Peripheral
+                                Arterial Disease and Claudication</a></li>
+                        <li><a href="https://familydoctor.org/condition/peritonsillar-abscess/">Peritonsillar
+                                Abscess</a></li>
+                        <li><a href="https://familydoctor.org/condition/persistent-depressive-disorder/">Persistent
+                                Depressive Disorder (PDD)</a></li>
+                        <li><a href="https://familydoctor.org/condition/peyronies-disease/">Peyronie’s Disease</a></li>
+                        <li><a href="https://familydoctor.org/condition/phenylketonuria-pku/">Phenylketonuria (PKU)</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/pica/">Pica</a></li>
+                        <li><a href="https://familydoctor.org/condition/pigmented-villonodular-synovitis/">Pigmented
+                                Villonodular Synovitis</a></li>
+                        <li><a href="https://familydoctor.org/condition/pilonidal-cyst/">Pilonidal Cyst</a></li>
+                        <li><a href="https://familydoctor.org/condition/pinworm-infection/">Pinworm Infection</a></li>
+                        <li><a href="https://familydoctor.org/condition/piriformis-syndrome/">Piriformis Syndrome</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/pituitary-tumors/">Pituitary Tumors</a></li>
+                        <li><a href="https://familydoctor.org/condition/pityriasis-rosea/">Pityriasis Rosea</a></li>
+                        <li><a href="https://familydoctor.org/condition/plagiocephaly/">Plagiocephaly</a></li>
+                        <li><a href="https://familydoctor.org/condition/plantar-fasciitis/">Plantar Fasciitis</a></li>
+                        <li><a href="https://familydoctor.org/condition/pleurisy-pleuritis/">Pleurisy (Pleuritis)</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/pneumonia-walking-pneumonia/">Pneumonia and
+                                Walking Pneumonia</a></li>
+                        <li><a href="https://familydoctor.org/condition/poison-ivy/">Poison Ivy</a></li>
+                        <li><a href="https://familydoctor.org/condition/poisoning/">Poisoning</a></li>
+                        <li><a href="https://familydoctor.org/condition/polycystic-kidney-disease/">Polycystic Kidney
+                                Disease</a></li>
+                        <li><a href="https://familydoctor.org/condition/polycystic-ovary-syndrome/">Polycystic Ovary
+                                Syndrome</a></li>
+                        <li><a href="https://familydoctor.org/condition/polycythemia-vera/">Polycythemia Vera</a></li>
+                        <li><a href="https://familydoctor.org/condition/polyps/">Polyps</a></li>
+                        <li><a href="https://familydoctor.org/condition/post-traumatic-stress-disorder/">Post-Traumatic
+                                Stress Disorder (PTSD)</a></li>
+                        <li><a href="https://familydoctor.org/condition/postpartum-depression/">Postpartum Depression
+                                (PPD)</a></li>
+                        <li><a href="https://familydoctor.org/condition/postpartum-preeclampsia/">Postpartum
+                                Preeclampsia</a></li>
+                        <li><a href="https://familydoctor.org/condition/prediabetes/">Prediabetes</a></li>
+                        <li><a href="https://familydoctor.org/condition/preeclampsia/">Preeclampsia</a></li>
+                        <li><a href="https://familydoctor.org/condition/premature-ejaculation/">Premature
+                                Ejaculation</a></li>
+                        <li><a href="https://familydoctor.org/condition/premenstrual-dysphoric-disorder/">Premenstrual
+                                Dysphoric Disorder</a></li>
+                        <li><a href="https://familydoctor.org/condition/premenstrual-syndrome/">Premenstrual Syndrome
+                                (PMS)</a></li>
+                        <li><a href="https://familydoctor.org/condition/prescription-drug-abuse-elderly/">Prescription
+                                Drug Abuse in the Elderly</a></li>
+                        <li><a href="https://familydoctor.org/condition/pressure-sores/">Pressure Sores</a></li>
+                        <li><a href="https://familydoctor.org/condition/prostate-cancer/">Prostate Cancer</a></li>
+                        <li><a href="https://familydoctor.org/condition/prostatitis/">Prostatitis</a></li>
+                        <li><a href="https://familydoctor.org/condition/pruritus-itchy-skin/">Pruritus (Itchy Skin)</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/pseudogout/">Pseudogout</a></li>
+                        <li><a href="https://familydoctor.org/condition/psoriasis/">Psoriasis</a></li>
+                        <li><a href="https://familydoctor.org/condition/pulmonary-hypertension/">Pulmonary
+                                Hypertension</a></li>
+                        <li><a href="https://familydoctor.org/condition/pyloric-stenosis/">Pyloric Stenosis</a></li>
+                        <li><a href="https://familydoctor.org/condition/raynauds-disease/">Raynaud's Disease</a></li>
+                        <li><a href="https://familydoctor.org/condition/reactive-arthritis/">Reactive Arthritis</a></li>
+                        <li><a href="https://familydoctor.org/condition/recurrent-pregnancy-loss/">Recurrent Pregnancy
+                                Loss</a></li>
+                        <li><a href="https://familydoctor.org/condition/reflux-acid-reflux-gerd/">Reflux/Acid Reflux
+                                (GERD)</a></li>
+                        <li><a href="https://familydoctor.org/condition/repeated-infections-children/">Repeated
+                                Infections in Children</a></li>
+                        <li><a href="https://familydoctor.org/condition/restless-leg-syndrome/">Restless Leg
+                                Syndrome</a></li>
+                        <li><a href="https://familydoctor.org/condition/reyes-syndrome/">Reye’s Syndrome</a></li>
+                        <li><a href="https://familydoctor.org/condition/rheumatic-fever/">Rheumatic Fever</a></li>
+                        <li><a href="https://familydoctor.org/condition/rheumatoid-arthritis/">Rheumatoid Arthritis</a>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+
+            </div>
+            <div class="symptom2">
+                <div>
+                    <ul id="symptomList">
+
+
+
+                        <li><a href="https://familydoctor.org/condition/rickets/">Rickets</a></li>
+                        <li><a href="https://familydoctor.org/condition/ringworm/">Ringworm</a></li>
+                        <li><a href="https://familydoctor.org/condition/rosacea/">Rosacea</a></li>
+                        <li><a href="https://familydoctor.org/condition/rotavirus/">Rotavirus</a></li>
+                        <li><a href="https://familydoctor.org/condition/rsv-respiratory-syncytial-virus/">RSV
+                                (Respiratory Syncytial Virus)</a></li>
+                        <li><a href="https://familydoctor.org/condition/rsv-in-adults-over-60/">RSV in Adults Over
+                                60</a></li>
+                        <li><a href="https://familydoctor.org/condition/sarcoidosis/">Sarcoidosis</a></li>
+                        <li><a href="https://familydoctor.org/condition/scarlet-fever/">Scarlet Fever</a></li>
+                        <li><a href="https://familydoctor.org/condition/schizophrenia/">Schizophrenia</a></li>
+                        <li><a href="https://familydoctor.org/condition/scleroderma/">Scleroderma</a></li>
+                        <li><a href="https://familydoctor.org/condition/scoliosis/">Scoliosis</a></li>
+                        <li><a href="https://familydoctor.org/condition/seasonal-affective-disorder/">Seasonal Affective
+                                Disorder</a></li>
+                        <li><a href="https://familydoctor.org/condition/seborrheic-dermatitis/">Seborrheic
+                                Dermatitis</a></li>
+                        <li><a href="https://familydoctor.org/condition/sensory-processing-disorder/">Sensory Processing
+                                Disorder (SPD)</a></li>
+                        <li><a href="https://familydoctor.org/condition/severs-disease/">Sever's Disease</a></li>
+                        <li><a href="https://familydoctor.org/condition/sexual-dysfunction-men-women/">Sexual
+                                Dysfunction in Men and Women</a></li>
+                        <li><a href="https://familydoctor.org/condition/sexually-transmitted-infections-stis/">Sexually
+                                Transmitted Infections (STIs)</a></li>
+                        <li><a href="https://familydoctor.org/condition/shaken-baby-syndrome-abusive-head-trauma/">Shaken
+                                Baby Syndrome (Abusive Head Trauma)</a></li>
+                        <li><a href="https://familydoctor.org/condition/shin-splints/">Shin Splints</a></li>
+                        <li><a href="https://familydoctor.org/condition/shingles/">Shingles</a></li>
+                        <li><a href="https://familydoctor.org/condition/shortness-of-breath/">Shortness of Breath</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/shoulder-instability/">Shoulder Instability</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/sick-sinus-syndrome/">Sick Sinus Syndrome</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/sickle-cell-disease/">Sickle Cell Disease</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/silent-heart-attacks/">Silent Heart Attacks</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/sinus-infection-sinusitis/">Sinus Infection
+                                (Sinusitis)</a></li>
+                        <li><a href="https://familydoctor.org/condition/sjogrens-syndrome/">Sjögren’s Syndrome</a></li>
+                        <li><a href="https://familydoctor.org/condition/skin-cancer/">Skin Cancer</a></li>
+                        <li><a href="https://familydoctor.org/condition/skin-tags/">Skin tags</a></li>
+                        <li><a href="https://familydoctor.org/condition/sleep-apnea/">Sleep Apnea</a></li>
+                        <li><a href="https://familydoctor.org/condition/sleepwalking/">Sleepwalking</a></li>
+                        <li><a href="https://familydoctor.org/condition/slipped-capital-femoral-epiphysis/">Slipped
+                                Capital Femoral Epiphysis</a></li>
+                        <li><a href="https://familydoctor.org/condition/small-vessel-disease/">Small Vessel Disease</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/social-phobia/">Social Phobia</a></li>
+                        <li><a href="https://familydoctor.org/condition/somatic-symptom-disorder/">Somatic Symptom
+                                Disorder</a></li>
+                        <li><a href="https://familydoctor.org/condition/sore-throat/">Sore Throat</a></li>
+                        <li><a href="https://familydoctor.org/condition/speech-and-language-delay/">Speech and Language
+                                Delay</a></li>
+                        <li><a href="https://familydoctor.org/condition/spina-bifida/">Spina Bifida</a></li>
+                        <li><a href="https://familydoctor.org/condition/spinal-cord-injury/">Spinal Cord Injury</a></li>
+                        <li><a href="https://familydoctor.org/condition/squamous-cell-carcinoma/">Squamous Cell
+                                Carcinoma</a></li>
+                        <li><a href="https://familydoctor.org/condition/stomach-cancer/">Stomach Cancer</a></li>
+                        <li><a href="https://familydoctor.org/condition/stomach-flu-gastroenteritis/">Stomach Flu
+                                (Gastroenteritis)</a></li>
+                        <li><a href="https://familydoctor.org/condition/strabismus/">Strabismus</a></li>
+                        <li><a href="https://familydoctor.org/condition/strep-throat/">Strep Throat</a></li>
+                        <li><a href="https://familydoctor.org/condition/stroke/">Stroke</a></li>
+                        <li><a href="https://familydoctor.org/condition/stuttering/">Stuttering</a></li>
+                        <li><a href="https://familydoctor.org/condition/sty/">Sty</a></li>
+                        <li><a href="https://familydoctor.org/condition/substance-use-disorder/">Substance Use
+                                Disorder</a></li>
+                        <li><a href="https://familydoctor.org/condition/sudden-infant-death-syndrome-sids/">Sudden
+                                Infant Death Syndrome (SIDS)</a></li>
+                        <li><a href="https://familydoctor.org/condition/syphilis/">Syphilis</a></li>
+                        <li><a href="https://familydoctor.org/condition/teeth-grinding-bruxism/">Teeth Grinding
+                                (Bruxism)</a></li>
+                        <li><a href="https://familydoctor.org/condition/tennis-elbow/">Tennis Elbow</a></li>
+                        <li><a href="https://familydoctor.org/condition/testicular-cancer/">Testicular Cancer</a></li>
+                        <li><a href="https://familydoctor.org/condition/testicular-torsion/">Testicular Torsion</a></li>
+                        <li><a href="https://familydoctor.org/condition/thalassemia/">Thalassemia</a></li>
+                        <li><a href="https://familydoctor.org/condition/thrush/">Thrush</a></li>
+                        <li><a href="https://familydoctor.org/condition/thyroid-nodules/">Thyroid Nodules</a></li>
+                        <li><a href="https://familydoctor.org/condition/thyroiditis/">Thyroiditis</a></li>
+                        <li><a href="https://familydoctor.org/condition/tick-borne-relapsing-fever/">Tick-Borne
+                                Relapsing Fever</a></li>
+                        <li><a href="https://familydoctor.org/condition/tinnitus/">Tinnitus</a></li>
+                        <li><a href="https://familydoctor.org/condition/tobacco-addiction/">Tobacco Addiction</a></li>
+                        <li><a href="https://familydoctor.org/condition/tonsillitis/">Tonsillitis</a></li>
+                        <li><a href="https://familydoctor.org/condition/tourette-syndrome-and-tics/">Tourette Syndrome
+                                and Tics</a></li>
+                        <li><a href="https://familydoctor.org/condition/toxic-shock-syndrome/">Toxic Shock Syndrome</a>
+                        </li>
+                        <li><a
+                                href="https://familydoctor.org/condition/toxic-synovitis-or-transient-synovitis-of-the-hip/">Toxic
+                                Synovitis, or Transient Synovitis of the Hip</a></li>
+                        <li><a href="https://familydoctor.org/condition/toxoplasmosis/">Toxoplasmosis</a></li>
+                        <li><a href="https://familydoctor.org/condition/traumatic-brain-injury/">Traumatic Brain
+                                Injury</a></li>
+                        <li><a href="https://familydoctor.org/condition/travelers-diarrhea/">Traveler’s Diarrhea</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/trigeminal-neuralgia/">Trigeminal Neuralgia</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/tuberculosis/">Tuberculosis</a></li>
+                        <li><a href="https://familydoctor.org/condition/tuberous-sclerosis/">Tuberous Sclerosis</a></li>
+                        <li><a href="https://familydoctor.org/condition/ulcers-stomach-ulcer-symptoms/">Ulcers - Stomach
+                                Ulcer Symptoms</a></li>
+                        <li><a href="https://familydoctor.org/condition/undescended-testicles/">Undescended
+                                Testicles</a></li>
+                        <li><a href="https://familydoctor.org/condition/urinary-incontinence/">Urinary Incontinence</a>
+                        </li>
+                        <li><a href="https://familydoctor.org/condition/uterine-fibroids/">Uterine Fibroids</a></li>
+                        <li><a href="https://familydoctor.org/condition/urinary-tract-infection/">Urinary Tract
+                                Infection</a></li>
+                        <li><a href="https://familydoctor.org/condition/vaginal-discharge/">Vaginal Discharge</a></li>
+                        <li><a href="https://familydoctor.org/condition/vaginitis/">Vaginitis</a></li>
+                        <li><a href="https://familydoctor.org/condition/varicose-veins/">Varicose Veins</a></li>
+                        <li><a href="https://familydoctor.org/condition/vibrio-vulnificus-infection/">Vibrio Vulnificus
+                                Infection</a></li>
+                        <li><a href="https://familydoctor.org/condition/vision-loss/">Vision Loss</a></li>
+                        <li><a href="https://familydoctor.org/condition/vitiligo/">Vitiligo</a></li>
+                        <li><a href="https://familydoctor.org/condition/vomiting-and-diarrhea/">Vomiting and
+                                Diarrhea</a></li>
+                        <li><a href="https://familydoctor.org/condition/vulvar-cancer/">Vulvar Cancer</a></li>
+                        <li><a href="https://familydoctor.org/condition/vulvodynia/">Vulvodynia</a></li>
+                        <li><a href="https://familydoctor.org/condition/warts-and-wart-removal/">Warts and Wart
+                                Removal</a></li>
+                        <li><a href="https://familydoctor.org/condition/west-nile-virus/">West Nile Virus</a></li>
+                        <li><a href="https://familydoctor.org/condition/whooping-cough/">Whooping Cough</a></li>
+                        <li><a href="https://familydoctor.org/condition/wolff-parkinson-white-syndrome/">Wolff-Parkinson-White
+                                Syndrome</a></li>
+                        <li><a href="https://familydoctor.org/condition/yeast-infections/">Yeast Infections</a></li>
+                        <li><a href="https://familydoctor.org/condition/zika/">Zika</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <footer>
+        <div class="social-icons">
+            <i class="fa fa-envelope" style="font-size:36px"></i>
+            <i class="fa fa-twitter" style="font-size:36px"></i>
+            <i class="fa fa-youtube-play" style="font-size:36px"></i>
+        </div>
+        <div class="developer-info">
+            <p>Site developed by: I,me&Myselflimited</p>
+            <p>Contact: Imemyself@egmail.com</p>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2024 Imeandmyself. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

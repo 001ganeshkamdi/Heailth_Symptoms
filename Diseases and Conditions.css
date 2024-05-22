@@ -1,0 +1,133 @@
+body {
+    background-color: #4C4CAF;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%236767b4' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%238282b9' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%239b9bc0' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23b3b3c9' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23c8c8d3' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23dcdce0' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23EEE' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+    }
+  
+
+    
+        :root {
+    --primary-color: #007bff; /* Default blue color */
+    --secondary-color: #261818; /* Default dark gray color */
+    --background-light: #6c6cf498; /* Default light blue background */
+    --box-shadow-color: rgba(39, 42, 192, 0.942); /* Default box shadow color */
+  }
+
+  body.dark {
+    background-color: #000000;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23222222' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23444444' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23666666' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23888888' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23aaaaaa' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23cccccc' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23EEE' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+    --primary-color: #BB86FC; /* Adjust primary color for dark mode */
+    --secondary-color: #998c8c; /* Adjust secondary color for dark mode */
+    --background-light: #2c272e; /* Adjust background color for dark mode */
+    --box-shadow-color: rgba(215, 207, 226, 0.971); /* Adjust box shadow color for dark mode */
+   
+  }
+.boxo {
+    background-color: #4c4caf;
+    padding: 20px;
+    margin-top: 100px;
+    text-align: center;
+    margin-right: 10%;
+    margin-left: 10%;
+    border-radius: 10px; /* Adding rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+}
+.boxoall {
+    background-color: aliceblue;
+    display: flex;
+    
+}
+.symptom {
+    background-color:#fff; /* Dark background color */
+    color:#3385ff;
+    width: 25%; /* Adjust width as needed */
+
+    top: 65px; /* Adjust top position to avoid overlapping with header */
+    bottom: 55px;
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.symptom ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+.symptom li {
+    margin-bottom: 10px;
+}
+
+.symptom li a {
+    color: #3385ff;
+    text-align: justify;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+
+    transition: background-color 0.3s ease;
+    border-radius: 8px; /* Rounded corners */
+}
+
+.symptom li a:hover {
+    background-color: #007bff28; /* Blue color on hover */
+    transform: scale(1.05); /* Increase size on hover */
+}
+.symptom2 {
+    background-color:#fff; /* Dark background color */
+    color:#3385ff;
+    width: 25%; /* Adjust width as needed */
+
+    top: 65px; /* Adjust top position to avoid overlapping with header */
+    bottom: 55px;
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.symptom2 ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+.symptom2 li {
+    margin-bottom: 10px;
+}
+
+.symptom2 li a {
+    color: #3385ff;
+    text-align: justify;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+
+    transition: background-color 0.3s ease;
+    border-radius: 8px; /* Rounded corners */
+}
+
+.symptom2 li a:hover {
+    background-color: #007bff28; /* Blue color on hover */
+    transform: scale(1.05); /* Increase size on hover */
+}
+#symptomFilter {
+    padding: 10px; /* Add padding for better appearance */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 16px; /* Set font size */
+    width: 300px; /* Set width */
+    margin-bottom: 20px; /* Add some space below */
+}
+
+/* Style the placeholder text */
+#symptomFilter::placeholder {
+    color: #999; /* Set placeholder color */
+}
+
+/* Style the input on focus */
+#symptomFilter:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #66afe9; /* Change border color on focus */
+    box-shadow: 0 0 5px #66afe9; /* Add a subtle shadow on focus */
+}
+

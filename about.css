@@ -1,0 +1,115 @@
+body {
+  background-color: #4C4CAF;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%236767b4' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%238282b9' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%239b9bc0' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23b3b3c9' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23c8c8d3' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23dcdce0' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23EEE' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+  }
+:root {
+  --primary-color: #007bff; /* Default blue color */
+  --secondary-color: #261818; /* Default dark gray color */
+  --background-light: #6c6cf498; /* Default light blue background */
+  --box-shadow-color: rgba(39, 42, 192, 0.942); /* Default box shadow color */
+}
+
+body.dark {
+  background-color: #000000;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23222222' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23444444' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23666666' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23888888' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23aaaaaa' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23cccccc' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23EEE' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+  --primary-color: #BB86FC; /* Adjust primary color for dark mode */
+  --secondary-color: #998c8c; /* Adjust secondary color for dark mode */
+  --background-light: #2c272e; /* Adjust background color for dark mode */
+  --box-shadow-color: rgba(215, 207, 226, 0.971); /* Adjust box shadow color for dark mode */
+ 
+}
+
+
+  
+
+.abouto {
+   
+    padding: 20px;
+    border-radius: 20px;
+    justify-content:center;
+    align-items: center;
+}
+.natural {
+  background-color: rgba(125, 58, 219, 0.197);
+  padding: 20px;
+  text-align: justify;
+  border-radius: 20px;
+  
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    
+    color: blanchedalmond;
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    
+    color: blanchedalmond;
+}
+h3{
+  font-family: Arial, Helvetica, sans-serif;
+  
+  color: blanchedalmond;
+}
+.natural p {
+    font-family: 'Times New Roman', Times, serif;
+    color: antiquewhite;
+
+}
+strong {
+    color: rgb(255, 221, 0);
+
+}
+a{
+
+  text-decoration: none;
+  transform: scale(1.05); 
+  color: rgb(255, 221, 0);
+  
+}
+
+.aboutos {
+   
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.about_box1 {
+    padding: 10px;
+    margin: 20px;
+    text-align: justify;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--box-shadow-color);
+    max-width: 50%;
+  }
+  
+  .about_box1:hover {
+    transform: scale(1.05); /* Increase size on hover */
+  }
+  
+
+  .about_box2 {
+    background-color: var(white); /* Use variable for background color */
+    padding: 10px;
+    margin: 20px;
+    text-align: justify;
+    border-radius: 5px;
+    max-width: 50%;
+    box-shadow: 0 2px 4px var(--box-shadow-color);
+  }
+  
+  
+  .about_box2 img {
+    max-width: 100%;
+  }
+  
+  .about_box2:hover {
+    transform: scale(1.05); /* Increase size on hover */
+  }
+  

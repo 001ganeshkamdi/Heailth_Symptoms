@@ -1,0 +1,1796 @@
+{
+    "Abdominal Aortic Aneurysm (AAA)": {
+        "symptoms": [
+            "Abdominal pain",
+            "Back pain",
+            "Pulsating feeling near the navel"
+        ],
+        "possible_causes": [
+            "Atherosclerosis (hardening of the arteries)",
+            "High blood pressure",
+            "Smoking",
+            "Family history of AAA",
+            "Male gender",
+            "Age over 60",
+            "Certain genetic conditions, such as Marfan syndrome or Ehlers-Danlos syndrome"
+        ],
+        "recommended_treatments": [
+            "Monitoring for small AAAs",
+            "Surgery for larger AAAs to prevent rupture",
+            "Lifestyle changes such as quitting smoking, managing blood pressure and cholesterol levels",
+            "Medications to control blood pressure and cholesterol levels",
+            "Regular exercise",
+            "Healthy diet rich in fruits, vegetables, and whole grains"
+        ]
+    },
+    "Abnormal Uterine Bleeding": {
+        "symptoms": [
+            "Heavy or prolonged menstrual periods",
+            "Spotting or bleeding between periods",
+            "Bleeding after menopause"
+        ],
+        "possible_causes": [
+            "Hormonal imbalance",
+            "Uterine fibroids",
+            "Polyps",
+            "Endometriosis",
+            "Adenomyosis",
+            "Pelvic inflammatory disease (PID)",
+            "Endometrial hyperplasia",
+            "Certain medications, such as blood thinners"
+        ],
+        "recommended_treatments": [
+            "Hormonal medications",
+            "Nonsteroidal anti-inflammatory drugs (NSAIDs)",
+            "Birth control pills",
+            "Endometrial ablation",
+            "Hysterectomy"
+        ]
+    },
+    "ACL Injury": {
+        "symptoms": [
+            "Pain",
+            "Swelling",
+            "Limited range of motion",
+            "Popping sensation",
+            "Instability or giving way of the knee"
+        ],
+        "possible_causes": [
+            "Sudden stopping or change in direction",
+            "Direct impact to the knee",
+            "Twisting or pivoting while the foot is firmly planted",
+            "Overextension of the knee joint"
+        ],
+        "recommended_treatments": [
+            "Rest, Ice, Compression, Elevation (RICE)",
+            "Physical therapy",
+            "Bracing",
+            "Surgery, such as ACL reconstruction"
+        ]
+    },
+    "Acne": {
+        "symptoms": [
+            "Pimples",
+            "Whiteheads",
+            "Blackheads"
+        ],
+        "possible_causes": [
+            "Excess oil production",
+            "Clogged hair follicles",
+            "Bacteria",
+            "Hormonal changes"
+        ],
+        "recommended_treatments": [
+            "Topical treatments (creams, gels)",
+            "Oral medications",
+            "Lifestyle changes (diet, hygiene)"
+        ]
+    },
+    "Acute Bronchitis": {
+        "symptoms": [
+            "Cough",
+            "Sore throat",
+            "Fatigue",
+            "Shortness of breath"
+        ],
+        "possible_causes": [
+            "Viral infection",
+            "Bacterial infection",
+            "Exposure to irritants (smoke, pollution)"
+        ],
+        "recommended_treatments": [
+            "Rest",
+            "Hydration",
+            "Cough suppressants",
+            "Antibiotics (if bacterial)"
+        ]
+    },
+    "Addison’s Disease": {
+        "symptoms": [
+            "Fatigue",
+            "Weight loss",
+            "Low blood pressure",
+            "Darkening of skin"
+        ],
+        "possible_causes": [
+            "Autoimmune disorder (adrenal glands attacked by immune system)"
+        ],
+        "recommended_treatments": [
+            "Hormone replacement therapy",
+            "Lifestyle adjustments (diet, stress management)"
+        ]
+    },
+    "ADHD in Children: Symptoms, Diagnosis, and Support": {
+        "symptoms": [
+            "Inattention",
+            "Hyperactivity",
+            "Impulsivity",
+            "Difficulty focusing"
+        ],
+        "possible_causes": [
+            "Genetics",
+            "Brain structure and function"
+        ],
+        "recommended_treatments": [
+            "Behavioral therapy",
+            "Medications (stimulants, non-stimulants)"
+        ]
+    },
+    "Adhesive Capsulitis (Frozen Shoulder)": {
+        "symptoms": [
+            "Shoulder pain",
+            "Stiffness",
+            "Limited range of motion"
+        ],
+        "possible_causes": [
+            "Inflammation",
+            "Scar tissue formation"
+        ],
+        "recommended_treatments": [
+            "Physical therapy",
+            "Pain medication",
+            "Corticosteroid injections"
+        ]
+    },
+    "Adult ADHD": {
+        "symptoms": [
+            "Inattention",
+            "Hyperactivity",
+            "Impulsivity",
+            "Difficulty organizing tasks"
+        ],
+        "possible_causes": [
+            "Genetics",
+            "Brain chemistry",
+            "Environmental factors"
+        ],
+        "recommended_treatments": [
+            "Medications (stimulants, non-stimulants)",
+            "Counseling",
+            "Lifestyle changes"
+        ]
+    },
+    "AIDS": {
+        "symptoms": [
+            "Fever",
+            "Fatigue",
+            "Swollen lymph nodes",
+            "Weight loss"
+        ],
+        "possible_causes": [
+            "HIV infection"
+        ],
+        "recommended_treatments": [
+            "Antiretroviral therapy (ART)",
+            "Supportive care"
+        ]
+    },
+    "Alcohol Abuse": {
+        "symptoms": [
+            "Increased tolerance",
+            "Drinking in risky situations",
+            "Neglecting responsibilities"
+        ],
+        "possible_causes": [
+            "Genetics",
+            "Environmental factors",
+            "Mental health issues"
+        ],
+        "recommended_treatments": [
+            "Counseling",
+            "Support groups",
+            "Medications (for withdrawal symptoms, cravings)"
+        ]
+    },
+    "Allergic Conjunctivitis": {
+        "symptoms": [
+            "Redness in the eyes",
+            "Itchiness",
+            "Watery eyes",
+            "Swelling of the eyelids"
+        ],
+        "possible_causes": [
+            "Exposure to allergens, such as pollen, dust, or pet dander",
+            "Allergic reaction to eye drops or contact lens solutions",
+            "Environmental factors, such as pollution or smoke"
+        ],
+        "recommended_treatments": [
+            "Avoiding allergens whenever possible",
+            "Using over-the-counter or prescription antihistamine eye drops",
+            "Applying cold compresses to the eyes",
+            "Taking oral antihistamines",
+            "Using artificial tears to relieve dryness"
+        ]
+    },
+    "Allergic Rhinitis (Allergies)": {
+        "symptoms": [
+            "Sneezing",
+            "Runny or stuffy nose",
+            "Itchy or watery eyes",
+            "Coughing",
+            "Sore throat",
+            "Fatigue"
+        ],
+        "possible_causes": [
+            "Exposure to allergens, such as pollen, dust mites, pet dander, or mold",
+            "Family history of allergies",
+            "Environmental factors, such as pollution or smoke"
+        ],
+        "recommended_treatments": [
+            "Avoiding allergens whenever possible",
+            "Using over-the-counter or prescription antihistamines",
+            "Nasal corticosteroid sprays to reduce inflammation",
+            "Decongestants to relieve nasal congestion",
+            "Allergy shots (immunotherapy) for severe allergies"
+        ]
+    },
+    "Alopecia Areata (AA)": {
+        "symptoms": [
+            "Sudden hair loss in small, round patches on the scalp or other parts of the body"
+        ],
+        "possible_causes": [
+            "Autoimmune disorder, where the immune system mistakenly attacks hair follicles",
+            "Genetic predisposition",
+            "Environmental factors, such as stress or trauma"
+        ],
+        "recommended_treatments": [
+            "Topical corticosteroids",
+            "Topical minoxidil (Rogaine)",
+            "Anthralin cream or ointment",
+            "Steroid injections into the scalp",
+            "Immunotherapy",
+            "Hair transplant surgery"
+        ]
+    },
+    "Alzheimer's Disease": {
+        "symptoms": [
+            "Memory loss",
+            "Difficulty in problem-solving",
+            "Confusion",
+            "Impaired judgment",
+            "Personality changes",
+            "Disorientation"
+        ],
+        "possible_causes": [
+            "Build-up of amyloid plaques and tau tangles in the brain",
+            "Genetic predisposition (early-onset Alzheimer's)",
+            "Age-related changes in the brain",
+            "Environmental factors, such as head trauma or cardiovascular disease"
+        ],
+        "recommended_treatments": [
+            "Medications to manage symptoms, such as cholinesterase inhibitors or memantine",
+            "Lifestyle modifications, such as regular exercise, healthy diet, and social engagement",
+            "Supportive therapies, such as occupational therapy or cognitive training",
+            "Clinical trials for experimental treatments"
+        ]
+    },
+    "Amblyopia": {
+        "symptoms": [
+            "Reduced vision in one eye",
+            "Squinting or tilting the head to see",
+            "Poor depth perception"
+        ],
+        "possible_causes": [
+            "Strabismus (misaligned eyes)",
+            "Refractive errors (e.g., nearsightedness, farsightedness, or astigmatism)",
+            "Cloudiness or blockage of vision in one eye during early childhood"
+        ],
+        "recommended_treatments": [
+            "Corrective eyeglasses or contact lenses",
+            "Eye patches to encourage the use of the weaker eye",
+            "Vision therapy exercises",
+            "Surgery to correct misaligned eyes (if applicable)"
+        ]
+    },
+    "Amenorrhea": {
+        "symptoms": [
+            "Absence of menstrual periods",
+            "Missed periods for three or more consecutive cycles"
+        ],
+        "possible_causes": [
+            "Pregnancy",
+            "Hormonal imbalance",
+            "Stress or excessive exercise",
+            "Polycystic ovary syndrome (PCOS)",
+            "Thyroid disorders",
+            "Premature ovarian failure",
+            "Uterine scarring or blockage",
+            "Certain medications or contraceptives"
+        ],
+        "recommended_treatments": [
+            "Treatment of underlying conditions, such as hormonal therapy for PCOS or thyroid disorders",
+            "Lifestyle modifications, such as stress reduction and balanced nutrition",
+            "Medications to induce ovulation (if necessary)",
+            "Evaluation and management by a healthcare provider"
+        ]
+    },
+    "Anal Fissure": {
+        "symptoms": [
+            "Pain during bowel movements",
+            "Bleeding during or after bowel movements",
+            "Itching or irritation around the anus"
+        ],
+        "possible_causes": [
+            "Passing hard or large stools",
+            "Chronic diarrhea or constipation",
+            "Anal trauma or injury",
+            "Inflammatory bowel disease (e.g., Crohn's disease)",
+            "Sexually transmitted infections (e.g., herpes or gonorrhea)"
+        ],
+        "recommended_treatments": [
+            "Increased fiber intake to soften stools",
+            "Topical treatments, such as nitroglycerin cream or calcium channel blockers",
+            "Sitz baths (warm water baths for the buttocks and hips)",
+            "Stool softeners or laxatives",
+            "Botulinum toxin injections or surgery (in severe cases)"
+        ]
+    },
+    "Anal Fistulas": {
+        "symptoms": [
+            "Pain and swelling near the anus",
+            "Discharge of pus or blood from an opening near the anus"
+        ],
+        "possible_causes": [
+            "Infection or inflammation of an anal gland",
+            "Crohn's disease or other inflammatory bowel diseases",
+            "Trauma or injury to the anal area",
+            "Abscesses or infections in the anal region"
+        ],
+        "recommended_treatments": [
+            "Warm baths (sitz baths) to relieve discomfort",
+            "Drainage of the fistula tract",
+            "Antibiotics to treat infection",
+            "Surgical procedures to remove the fistula tract or repair the affected area"
+        ]
+    },
+    "Anaphylaxis": {
+        "symptoms": [
+            "Hives",
+            "Swelling of the face, lips, tongue, or throat",
+            "Difficulty breathing",
+            "Wheezing",
+            "Rapid heartbeat",
+            "Dizziness or fainting"
+        ],
+        "possible_causes": [
+            "Severe allergic reaction to certain foods (e.g., nuts, shellfish), medications (e.g., antibiotics, NSAIDs), insect stings, or latex",
+            "Exposure to allergens that trigger anaphylaxis"
+        ],
+        "recommended_treatments": [
+            "Epinephrine injection (EpiPen) to reverse symptoms",
+            "Calling emergency services (911) immediately",
+            "Administration of oxygen and intravenous fluids",
+            "Antihistamines and corticosteroids to reduce inflammation",
+            "Monitoring in a hospital or emergency room"
+        ]
+    },
+    "Anemia": {
+        "symptoms": [
+            "Fatigue",
+            "Weakness",
+            "Pale or yellowish skin",
+            "Shortness of breath",
+            "Dizziness or lightheadedness",
+            "Cold hands and feet",
+            "Irregular heartbeat"
+        ],
+        "possible_causes": [
+            "Iron deficiency",
+            "Vitamin B12 deficiency",
+            "Folate deficiency",
+            "Chronic diseases (e.g., kidney disease, cancer)",
+            "Blood loss (e.g., menstruation, gastrointestinal bleeding)",
+            "Bone marrow disorders",
+            "Certain medications (e.g., chemotherapy)"
+        ],
+        "recommended_treatments": [
+            "Iron supplements or intravenous iron therapy for iron deficiency anemia",
+            "Vitamin B12 or folate supplements for deficiency-related anemias",
+            "Treatment of underlying conditions causing anemia",
+            "Blood transfusions (in severe cases)",
+            "Dietary changes to include iron-rich foods (e.g., red meat, spinach, lentils)"
+        ]
+    },
+    "Angina": {
+        "symptoms": [
+            "Chest pain or discomfort",
+            "Pressure or squeezing sensation in the chest",
+            "Pain radiating to the arms, shoulders, neck, jaw, or back",
+            "Shortness of breath",
+            "Nausea",
+            "Fatigue"
+        ],
+        "possible_causes": [
+            "Coronary artery disease (narrowing or blockage of the coronary arteries)",
+            "Atherosclerosis (build-up of plaque in the arteries)",
+            "Spasms of the coronary arteries",
+            "Physical exertion or emotional stress"
+        ],
+        "recommended_treatments": [
+            "Nitroglycerin tablets or sprays to relieve chest pain",
+            "Aspirin or other antiplatelet medications",
+            "Beta-blockers or calcium channel blockers to reduce heart workload",
+            "Statins or other cholesterol-lowering medications",
+            "Angioplasty or stent placement to open narrowed arteries",
+            "Coronary artery bypass grafting (CABG) surgery"
+        ]
+    },
+    "Ankle Sprains": {
+        "symptoms": [
+            "Pain or tenderness",
+            "Swelling",
+            "Bruising",
+            "Difficulty walking or bearing weight on the affected ankle"
+        ],
+        "possible_causes": [
+            "Twisting or rolling the ankle beyond its normal range of motion",
+            "Landing on the foot awkwardly after a jump",
+            "Walking or running on uneven surfaces",
+            "Wearing inappropriate footwear",
+            "Weak ankle muscles or ligaments"
+        ],
+        "recommended_treatments": [
+            "RICE therapy (Rest, Ice, Compression, Elevation)",
+            "Over-the-counter pain relievers, such as ibuprofen or acetaminophen",
+            "Ankle braces or wraps for support",
+            "Physical therapy exercises to strengthen the ankle",
+            "Gradual return to weight-bearing activities",
+            "Surgery (in severe cases or for recurrent sprains)"
+        ]
+    },
+    "Appendicitis": {
+        "symptoms": [
+            "Pain in the abdomen, particularly around the navel or lower right side",
+            "Loss of appetite",
+            "Nausea",
+            "Vomiting",
+            "Low-grade fever",
+            "Swelling or tenderness in the abdomen"
+        ],
+        "possible_causes": [
+            "Blockage of the appendix by feces, foreign objects, or cancer",
+            "Infection of the appendix"
+        ],
+        "recommended_treatments": [
+            "Appendectomy (surgical removal of the appendix)",
+            "Antibiotics to treat infection"
+        ]
+    },
+    "Arrhythmia": {
+        "symptoms": [
+            "Fluttering or racing heartbeat",
+            "Slow heartbeat",
+            "Chest pain",
+            "Shortness of breath",
+            "Dizziness",
+            "Fainting"
+        ],
+        "possible_causes": [
+            "Heart disease or damage",
+            "Electrolyte imbalances",
+            "High blood pressure",
+            "Thyroid disorders",
+            "Medications"
+        ],
+        "recommended_treatments": [
+            "Medications to control heart rhythm",
+            "Cardioversion (electric shock to restore normal rhythm)",
+            "Implantable devices, such as pacemakers or defibrillators",
+            "Ablation therapy to destroy abnormal heart tissue"
+        ]
+    },
+    "Arrhythmogenic Right Ventricular Cardiomyopathy (ARVC)": {
+        "symptoms": [
+            "Palpitations (irregular heartbeat)",
+            "Fainting",
+            "Shortness of breath",
+            "Swelling in the legs or abdomen",
+            "Fatigue"
+        ],
+        "possible_causes": [
+            "Genetic mutations affecting proteins in heart muscle cells",
+            "Family history of ARVC"
+        ],
+        "recommended_treatments": [
+            "Medications to control heart rhythm and prevent blood clots",
+            "Implantable cardioverter-defibrillator (ICD) to shock the heart back into normal rhythm",
+            "Heart transplantation (in severe cases)"
+        ]
+    },
+    "Asperger's Syndrome": {
+        "symptoms": [
+            "Difficulty with social interactions",
+            "Repetitive behaviors",
+            "Limited interests",
+            "Difficulty with nonverbal communication"
+        ],
+        "possible_causes": [
+            "Genetic factors",
+            "Abnormalities in brain structure or function"
+        ],
+        "recommended_treatments": [
+            "Behavioral therapy to improve social skills and behavior management",
+            "Education and support for families",
+            "Medications for associated symptoms, such as anxiety or depression"
+        ]
+    },
+    "Asthma": {
+        "symptoms": [
+            "Coughing",
+            "Wheezing",
+            "Shortness of breath",
+            "Chest tightness"
+        ],
+        "possible_causes": [
+            "Genetic predisposition",
+            "Exposure to allergens (e.g., pollen, dust mites, pet dander)",
+            "Respiratory infections",
+            "Physical activity or exercise",
+            "Air pollution",
+            "Tobacco smoke"
+        ],
+        "recommended_treatments": [
+            "Bronchodilators to open airways (e.g., albuterol)",
+            "Anti-inflammatory medications (e.g., corticosteroids)",
+            "Allergy medications",
+            "Avoiding triggers",
+            "Regular monitoring and action plan"
+        ]
+    },
+    "Asthma in Kids": {
+        "symptoms": [
+            "Coughing",
+            "Wheezing",
+            "Shortness of breath",
+            "Chest tightness"
+        ],
+        "possible_causes": [
+            "Genetic predisposition",
+            "Exposure to allergens (e.g., pollen, dust mites, pet dander)",
+            "Respiratory infections",
+            "Physical activity or exercise",
+            "Air pollution",
+            "Tobacco smoke"
+        ],
+        "recommended_treatments": [
+            "Bronchodilators to open airways (e.g., albuterol)",
+            "Anti-inflammatory medications (e.g., corticosteroids)",
+            "Allergy medications",
+            "Avoiding triggers",
+            "Regular monitoring and action plan"
+        ]
+    },
+    "Atherosclerosis": {
+        "symptoms": [
+            "Chest pain",
+            "Shortness of breath",
+            "Leg pain",
+            "Fatigue",
+            "Confusion"
+        ],
+        "possible_causes": [
+            "High cholesterol",
+            "High blood pressure",
+            "Smoking",
+            "Diabetes",
+            "Obesity",
+            "Lack of physical activity",
+            "Poor diet"
+        ],
+        "recommended_treatments": [
+            "Lifestyle changes, including diet modification, regular exercise, smoking cessation",
+            "Medications to lower cholesterol and blood pressure",
+            "Angioplasty and stenting to open narrowed arteries",
+            "Coronary artery bypass grafting (CABG)"
+        ]
+    },
+    "Attention-Deficit Hyperactivity Disorder (ADHD)": {
+        "symptoms": [
+            "Inattention",
+            "Hyperactivity",
+            "Impulsivity",
+            "Difficulty organizing tasks",
+            "Forgetfulness",
+            "Fidgeting"
+        ],
+        "possible_causes": [
+            "Genetics",
+            "Brain chemistry and function",
+            "Environmental factors (e.g., exposure to toxins during pregnancy, low birth weight)"
+        ],
+        "recommended_treatments": [
+            "Behavioral therapy",
+            "Medications (e.g., stimulants, non-stimulants)",
+            "Parenting skills training",
+            "Education and support"
+        ]
+    },
+    "Autism": {
+        "symptoms": [
+            "Difficulty with social interaction",
+            "Difficulty with communication",
+            "Repetitive behaviors",
+            "Limited interests",
+            "Sensory sensitivities"
+        ],
+        "possible_causes": [
+            "Genetic factors",
+            "Abnormalities in brain structure or function",
+            "Environmental factors (e.g., advanced parental age, prenatal exposure to certain medications or toxins)"
+        ],
+        "recommended_treatments": [
+            "Behavioral therapy (e.g., applied behavior analysis)",
+            "Educational interventions (e.g., structured teaching)",
+            "Medications for associated symptoms (e.g., anxiety, aggression)"
+        ]
+    },
+    "Avian Flu": {
+        "symptoms": [
+            "Fever",
+            "Cough",
+            "Sore throat",
+            "Muscle aches",
+            "Fatigue",
+            "Headache"
+        ],
+        "possible_causes": [
+            "Infection with avian influenza viruses (e.g., H5N1, H7N9)",
+            "Direct contact with infected birds or contaminated surfaces",
+            "Rare transmission from person to person"
+        ],
+        "recommended_treatments": [
+            "Antiviral medications (e.g., oseltamivir, zanamivir)",
+            "Supportive care (e.g., rest, fluids, pain relievers)"
+        ]
+    },
+    "Babesiosis": {
+        "symptoms": [
+            "Fever",
+            "Chills",
+            "Sweating",
+            "Muscle aches",
+            "Fatigue",
+            "Headache"
+        ],
+        "possible_causes": [
+            "Infection with Babesia parasites transmitted by tick bites",
+            "Transfusion of contaminated blood products",
+            "Mother-to-child transmission during pregnancy or birth"
+        ],
+        "recommended_treatments": [
+            "Antiparasitic medications (e.g., atovaquone plus azithromycin)",
+            "Antibiotics (e.g., clindamycin plus quinine)",
+            "Supportive care for severe cases"
+        ]
+    },
+    "Bacterial Endocarditis": {
+        "symptoms": [
+            "Fever",
+            "Chills",
+            "Fatigue",
+            "Weakness",
+            "Joint pain",
+            "Shortness of breath",
+            "Cough",
+            "Swelling in the legs or abdomen"
+        ],
+        "possible_causes": [
+            "Bacterial infection of the heart's inner lining (endocardium)",
+            "Infection often occurs when bacteria enter the bloodstream (e.g., during dental procedures, surgery, IV drug use)"
+        ],
+        "recommended_treatments": [
+            "Antibiotics to treat the underlying infection",
+            "Surgery to repair or replace damaged heart valves in severe cases",
+            "Preventive antibiotics before certain dental or medical procedures for high-risk individuals"
+        ]
+    },
+    "Bacterial Vaginosis (BV)": {
+        "symptoms": [
+            "Thin, gray, white, or green vaginal discharge",
+            "Fishy odor",
+            "Burning sensation during urination",
+            "Itching around the outside of the vagina"
+        ],
+        "possible_causes": [
+            "Imbalance of bacteria in the vagina, including a decrease in beneficial lactobacilli and an increase in harmful bacteria (e.g., Gardnerella vaginalis)"
+        ],
+        "recommended_treatments": [
+            "Antibiotics, such as metronidazole or clindamycin",
+            "Probiotics to restore healthy vaginal bacteria"
+        ]
+    },
+    "Barrett’s Esophagus": {
+        "symptoms": [
+            "Heartburn",
+            "Difficulty swallowing",
+            "Chest pain"
+        ],
+        "possible_causes": [
+            "Chronic gastroesophageal reflux disease (GERD), which causes stomach acid to back up into the esophagus",
+            "Long-term irritation and inflammation of the esophagus"
+        ],
+        "recommended_treatments": [
+            "Medications to reduce stomach acid (e.g., proton pump inhibitors)",
+            "Lifestyle changes (e.g., avoiding trigger foods, losing weight)",
+            "Regular monitoring and surveillance to detect precancerous changes"
+        ]
+    },
+    "Bartholin's Gland Cyst": {
+        "symptoms": [
+            "Painless lump near the vaginal opening",
+            "Swelling",
+            "Discomfort or pain during intercourse"
+        ],
+        "possible_causes": [
+            "Blockage of the Bartholin's glands, which are responsible for producing vaginal lubrication"
+        ],
+        "recommended_treatments": [
+            "Warm compresses to reduce swelling and encourage drainage",
+            "Surgical drainage or removal of the cyst in severe cases"
+        ]
+    },
+    "Bedbugs": {
+        "symptoms": [
+            "Itchy, red bites on the skin",
+            "Rash",
+            "Allergic reaction in severe cases"
+        ],
+        "possible_causes": [
+            "Infestation of bedbugs (Cimex lectularius) in bedding, furniture, or clothing",
+            "Travel or exposure to infested environments"
+        ],
+        "recommended_treatments": [
+            "Cleaning and vacuuming infested areas",
+            "Washing bedding and clothing in hot water",
+            "Using insecticides or professional pest control services"
+        ]
+    },
+    "Bell’s Palsy": {
+        "symptoms": [
+            "Sudden weakness or paralysis on one side of the face",
+            "Drooping of the mouth or eyelid",
+            "Difficulty closing one eye",
+            "Drooling",
+            "Pain around the jaw or behind the ear"
+        ],
+        "possible_causes": [
+            "Viral infection, most commonly by the herpes simplex virus (HSV)"
+        ],
+        "recommended_treatments": [
+            "Corticosteroids to reduce inflammation",
+            "Antiviral medications (in some cases)",
+            "Physical therapy to maintain muscle strength and prevent contractures",
+            "Eye protection to prevent corneal damage"
+        ]
+    },
+    "Benign Breast Conditions": {
+        "symptoms": ["Breast lumps", "Breast pain or tenderness", "Nipple discharge", "Changes in breast size or shape"],
+        "possible_causes": [
+          "Hormonal changes",
+          "Fibrocystic changes in breast tissue",
+          "Cysts",
+          "Fibroadenomas",
+          "Infections",
+          "Trauma"
+        ],
+        "recommended_treatments": [
+          "Monitoring for changes in breast health",
+          "Pain management techniques (e.g., over-the-counter pain relievers, warm compresses)",
+          "Medical procedures for specific conditions (e.g., draining cysts, surgical removal of fibroadenomas)"
+        ]
+      },
+      "Benign Paroxysmal Positional Vertigo (BPPV)": {
+        "symptoms": ["Brief episodes of vertigo triggered by changes in head position", "Nystagmus (involuntary eye movements)", "Nausea", "Vomiting"],
+        "possible_causes": [
+          "Displacement of calcium carbonate crystals (otoconia) within the inner ear"
+        ],
+        "recommended_treatments": [
+          "Epley maneuver or other canalith repositioning procedures to move displaced crystals out of the semicircular canals",
+          "Vestibular rehabilitation exercises to improve balance and reduce symptoms",
+          "Medications to manage symptoms (e.g., anti-nausea drugs)"
+        ]
+      },
+      "Benign Prostatic Hyperplasia (BPH)": {
+        "symptoms": ["Frequent urination", "Urgency to urinate", "Weak urine stream", "Difficulty starting urination", "Incomplete emptying of the bladder", "Straining during urination"],
+        "possible_causes": [
+          "Age-related changes in hormone levels, particularly dihydrotestosterone (DHT)",
+          "Enlargement of the prostate gland due to cellular proliferation"
+        ],
+        "recommended_treatments": [
+          "Watchful waiting (monitoring without immediate intervention)",
+          "Medications to relax prostate and bladder muscles (e.g., alpha blockers, 5-alpha reductase inhibitors)",
+          "Minimally invasive procedures (e.g., transurethral microwave therapy, laser therapy)",
+          "Surgery to remove excess prostate tissue (e.g., transurethral resection of the prostate)"
+        ]
+      },
+      "Bipolar Disorder": {
+        "symptoms": ["Periods of intense mood swings, including manic episodes and depressive episodes", "Changes in energy levels and activity", "Altered sleep patterns", "Impaired judgment and decision-making", "Impulsive behavior", "Difficulty concentrating"],
+        "possible_causes": [
+          "Genetic factors",
+          "Neurochemical imbalances (e.g., abnormalities in neurotransmitter levels)",
+          "Environmental triggers (e.g., stressful life events)"
+        ],
+        "recommended_treatments": [
+          "Mood stabilizers (e.g., lithium, anticonvulsants)",
+          "Antipsychotic medications",
+          "Antidepressants (in combination with mood stabilizers)",
+          "Psychotherapy (e.g., cognitive-behavioral therapy, interpersonal and social rhythm therapy)",
+          "Lifestyle modifications (e.g., maintaining a regular sleep schedule, avoiding substance abuse)"
+        ]
+      },
+      "Bladder Stones": {
+        "symptoms": ["Pain or discomfort in the lower abdomen", "Frequent, urgent need to urinate", "Painful urination", "Blood in the urine", "Difficulty urinating", "Cloudy or foul-smelling urine"],
+        "possible_causes": [
+          "Concentration of minerals in the urine (e.g., calcium, uric acid) that crystallize and form stones",
+          "Urinary tract infections",
+          "Obstruction or blockage in the urinary tract",
+          "Dehydration"
+        ],
+        "recommended_treatments": [
+          "Drinking plenty of fluids to flush out the stones",
+          "Medications to relieve pain and discomfort",
+          "Surgical procedures to remove or break up larger stones (e.g., lithotripsy, cystolitholapaxy)"
+        ]
+      },
+      "Blepharospasm": {
+        "symptoms": ["Uncontrolled blinking", "Eyelid twitching", "Dry eyes", "Light sensitivity", "Eye irritation"],
+        "possible_causes": [
+          "Stress",
+          "Fatigue",
+          "Eye strain",
+          "Neurological disorders"
+        ],
+        "recommended_treatments": [
+          "Botox injections to reduce muscle spasms",
+          "Medications to relax muscles",
+          "Stress management techniques",
+          "Eye protection and lubrication"
+        ]
+      },
+      "Bloating": {
+        "symptoms": ["Abdominal fullness", "Distension", "Gas", "Discomfort", "Belching"],
+        "possible_causes": [
+          "Overeating",
+          "Swallowing air",
+          "Digestive disorders (e.g., IBS, celiac disease)",
+          "Food intolerances",
+          "Constipation",
+          "Hormonal changes"
+        ],
+        "recommended_treatments": [
+          "Dietary modifications (e.g., reducing intake of gas-producing foods)",
+          "Over-the-counter medications (e.g., antacids, simethicone)",
+          "Probiotics",
+          "Regular exercise",
+          "Adequate hydration"
+        ]
+      },
+      "Blood Clots": {
+        "symptoms": ["Swelling", "Pain", "Redness", "Warmth in the affected area", "Shortness of breath (if a clot travels to the lungs)"],
+        "possible_causes": [
+          "Immobility",
+          "Surgery",
+          "Injury",
+          "Certain medications",
+          "Chronic illnesses (e.g., cancer, heart disease)",
+          "Genetic factors"
+        ],
+        "recommended_treatments": [
+          "Anticoagulant medications",
+          "Thrombolytic therapy",
+          "Compression stockings",
+          "Lifestyle changes (e.g., regular physical activity, hydration)"
+        ]
+      },
+      "Blood Poisoning (Sepsis)": {
+        "symptoms": ["Fever", "Chills", "Rapid breathing", "Increased heart rate", "Confusion", "Low blood pressure"],
+        "possible_causes": [
+          "Bacterial infections",
+          "Fungal infections",
+          "Viral infections",
+          "Infected wounds",
+          "Infections following surgery"
+        ],
+        "recommended_treatments": [
+          "Antibiotics or antifungal medications",
+          "Intravenous fluids",
+          "Oxygen therapy",
+          "Vasopressors to increase blood pressure",
+          "Supportive care in an intensive care unit (ICU)"
+        ]
+      },
+      "Bone Cancer": {
+        "symptoms": ["Bone pain", "Swelling and tenderness near affected area", "Fractures", "Fatigue", "Unintended weight loss"],
+        "possible_causes": [
+          "Genetic mutations",
+          "Previous radiation therapy",
+          "Certain genetic conditions (e.g., Li-Fraumeni syndrome)"
+        ],
+        "recommended_treatments": [
+          "Surgery to remove the tumor",
+          "Chemotherapy",
+          "Radiation therapy",
+          "Targeted therapy",
+          "Pain management strategies"
+        ]
+      },
+      "Breast Cancer": {
+        "symptoms": ["Lump in the breast or underarm", "Change in the size or shape of the breast", "Dimpling or puckering of the skin", "Nipple discharge", "Redness or scaling of the nipple or breast skin"],
+        "possible_causes": [
+          "Genetic mutations (e.g., BRCA1, BRCA2)",
+          "Family history of breast cancer",
+          "Hormonal factors",
+          "Age",
+          "Radiation exposure"
+        ],
+        "recommended_treatments": [
+          "Surgery (e.g., lumpectomy, mastectomy)",
+          "Radiation therapy",
+          "Chemotherapy",
+          "Hormonal therapy",
+          "Targeted therapy",
+          "Immunotherapy"
+        ]
+      },
+      "Breast Pain in Women": {
+        "symptoms": ["Tenderness", "Sharp or burning pain", "Tightness in breast tissue", "Pain may be constant or intermittent"],
+        "possible_causes": [
+          "Hormonal fluctuations",
+          "Breast cysts",
+          "Fibrocystic breast changes",
+          "Mastitis",
+          "Injury to the breast",
+          "Certain medications"
+        ],
+        "recommended_treatments": [
+          "Over-the-counter pain relievers",
+          "Warm or cold compresses",
+          "Wearing a supportive bra",
+          "Reducing caffeine and dietary fat intake",
+          "Hormonal treatments"
+        ]
+      },
+      "Bronchiolitis": {
+        "symptoms": ["Coughing", "Wheezing", "Shortness of breath", "Runny nose", "Fever", "Decreased appetite"],
+        "possible_causes": [
+          "Respiratory syncytial virus (RSV)",
+          "Other viral infections (e.g., rhinovirus, influenza)",
+          "Premature birth",
+          "Exposure to tobacco smoke"
+        ],
+        "recommended_treatments": [
+          "Supportive care (e.g., hydration, rest)",
+          "Oxygen therapy (if needed)",
+          "Nebulized hypertonic saline",
+          "In severe cases, hospitalization may be required"
+        ]
+      },
+      "Burners (Stingers)": {
+        "symptoms": ["Burning or stinging sensation in the neck or shoulder", "Weakness in the arm or hand", "Numbness or tingling in the arm"],
+        "possible_causes": [
+          "Stretching or compression of the brachial plexus nerves",
+          "Direct impact to the neck or shoulder area",
+          "Head turned forcefully to one side while the shoulder is pulled in the opposite direction"
+        ],
+        "recommended_treatments": [
+          "Rest",
+          "Ice therapy",
+          "Physical therapy",
+          "Pain relievers",
+          "In some cases, a cervical collar may be recommended"
+        ]
+      },
+      "Burning Mouth Syndrome": {
+        "symptoms": ["Burning sensation in the mouth (tongue, gums, lips, inside of cheeks)", "Dry mouth", "Bitter or metallic taste"],
+        "possible_causes": [
+          "Nutritional deficiencies (e.g., vitamin B12, iron)",
+          "Dry mouth",
+          "Oral infections",
+          "Allergic reactions",
+          "Gastroesophageal reflux disease (GERD)",
+          "Hormonal changes"
+        ],
+        "recommended_treatments": [
+          "Saliva replacement products",
+          "Pain relievers",
+          "Medications to treat underlying conditions (e.g., antidepressants for neuropathic pain)",
+          "Nutritional supplements",
+          "Dietary changes"
+        ]
+      },
+      "Bursitis of the Hip": {
+        "symptoms": ["Pain on the outside of the hip", "Tenderness when pressing on the hip", "Pain that worsens with physical activity or prolonged standing"],
+        "possible_causes": [
+          "Repetitive motion or overuse",
+          "Hip injury",
+          "Rheumatoid arthritis",
+          "Bone spurs or calcium deposits",
+          "Spinal abnormalities"
+        ],
+        "recommended_treatments": [
+          "Rest and avoidance of activities that worsen symptoms",
+          "Ice therapy",
+          "Nonsteroidal anti-inflammatory drugs (NSAIDs)",
+          "Physical therapy",
+          "Corticosteroid injections",
+          "Surgery (in severe cases)"
+        ]
+      },
+      "C. diff (Clostridium difficile) Infection": {
+        "symptoms": ["Watery diarrhea", "Abdominal cramping and pain", "Fever", "Nausea", "Loss of appetite", "Dehydration"],
+        "possible_causes": [
+          "Use of antibiotics",
+          "Hospital or nursing home stay",
+          "Weakened immune system",
+          "Previous infection with C. diff"
+        ],
+        "recommended_treatments": [
+          "Stopping the use of the antibiotic that triggered the infection",
+          "Antibiotics specific for C. diff (e.g., vancomycin, fidaxomicin)",
+          "Probiotics",
+          "Fecal microbiota transplantation (in recurrent cases)"
+        ]
+      },
+      "Cancer": {
+        "symptoms": ["Unexplained weight loss", "Fatigue", "Fever", "Pain", "Skin changes", "Changes in bowel or bladder function", "Unusual bleeding or discharge"],
+        "possible_causes": [
+          "Genetic mutations",
+          "Tobacco use",
+          "Radiation exposure",
+          "Certain infections (e.g., HPV, hepatitis B and C)",
+          "Environmental pollutants",
+          "Lifestyle factors (e.g., diet, physical inactivity)"
+        ],
+        "recommended_treatments": [
+          "Surgery",
+          "Radiation therapy",
+          "Chemotherapy",
+          "Immunotherapy",
+          "Targeted therapy",
+          "Hormonal therapy",
+          "Stem cell transplant"
+        ]
+      },
+      "Canker Sores": {
+        "symptoms": ["Small, painful ulcers inside the mouth", "Round or oval shape with a white or yellow center and a red border", "Pain or discomfort when eating, drinking, or talking"],
+        "possible_causes": [
+          "Minor mouth injury",
+          "Food sensitivities",
+          "Stress",
+          "Hormonal changes",
+          "Nutritional deficiencies (e.g., vitamin B12, folate, iron)",
+          "Certain medical conditions (e.g., celiac disease, inflammatory bowel disease)"
+        ],
+        "recommended_treatments": [
+          "Over-the-counter topical treatments",
+          "Mouth rinses with corticosteroids or other medications",
+          "Avoiding trigger foods",
+          "Maintaining good oral hygiene",
+          "Pain relievers",
+          "In severe cases, oral medications may be prescribed"
+        ]
+      },
+      "Cardiomyopathy": {
+        "symptoms": ["Shortness of breath", "Fatigue", "Swelling in the legs, ankles, and feet", "Irregular heartbeats", "Dizziness or lightheadedness", "Chest pain"],
+        "possible_causes": [
+          "Genetic mutations",
+          "Chronic high blood pressure",
+          "Heart valve problems",
+          "Metabolic disorders",
+          "Nutritional deficiencies",
+          "Exposure to toxins",
+          "Infections"
+        ],
+        "recommended_treatments": [
+          "Medications to manage symptoms and prevent complications",
+          "Implantable devices (e.g., pacemakers, defibrillators)",
+          "Surgery (e.g., septal myectomy)",
+          "Lifestyle changes (e.g., diet, exercise)",
+          "Heart transplant (in severe cases)"
+        ]
+      },
+      "Carpal Tunnel Syndrome": {
+        "symptoms": ["Numbness or tingling in the fingers or hand", "Pain in the wrist or hand", "Weakness in the hand", "Difficulty with fine motor skills"],
+        "possible_causes": [
+          "Repetitive hand movements",
+          "Wrist anatomy (e.g., smaller carpal tunnel)",
+          "Hormonal changes (e.g., pregnancy, menopause)",
+          "Certain medical conditions (e.g., diabetes, rheumatoid arthritis)",
+          "Injury to the wrist"
+        ],
+        "recommended_treatments": [
+          "Wrist splinting",
+          "Nonsteroidal anti-inflammatory drugs (NSAIDs)",
+          "Corticosteroid injections",
+          "Physical therapy",
+          "Surgery to release the pressure on the median nerve"
+        ]
+      },
+      "Cat-Scratch Disease (Cat-Scratch Fever)": {
+        "symptoms": ["Bump or blister at the site of the scratch or bite", "Swollen lymph nodes near the scratch or bite", "Fever", "Fatigue", "Headache", "Body aches"],
+        "possible_causes": [
+          "Bartonella henselae bacteria transmitted through a cat scratch or bite",
+          "Contact with an infected cat's saliva"
+        ],
+        "recommended_treatments": [
+          "Antibiotics (in severe cases or for people with weakened immune systems)",
+          "Pain relievers",
+          "Rest",
+          "Warm compresses to relieve swollen lymph nodes"
+        ]
+      },
+      "Celiac Disease": {
+        "symptoms": ["Diarrhea", "Fatigue", "Weight loss", "Bloating and gas", "Abdominal pain", "Nausea and vomiting", "Constipation"],
+        "possible_causes": [
+          "Genetic predisposition",
+          "Consumption of gluten-containing foods (e.g., wheat, barley, rye)",
+          "Autoimmune reaction to gluten"
+        ],
+        "recommended_treatments": [
+          "Strict lifelong gluten-free diet",
+          "Nutritional supplements (to address deficiencies)",
+          "Regular follow-up with a healthcare provider",
+          "Medications to manage symptoms or complications (in some cases)"
+        ]
+      },
+      "Cellulitis": {
+        "symptoms": ["Red, swollen, and tender skin", "Warmth in the affected area", "Fever", "Chills", "Swollen lymph nodes"],
+        "possible_causes": [
+          "Bacterial infection (commonly Streptococcus or Staphylococcus)",
+          "Breaks in the skin (e.g., cuts, insect bites, surgical wounds)",
+          "Weakened immune system"
+        ],
+        "recommended_treatments": [
+          "Oral antibiotics",
+          "Hospitalization and intravenous antibiotics (in severe cases)",
+          "Pain relievers",
+          "Elevating the affected area",
+          "Wound care"
+        ]
+      },
+      "Central Precocious Puberty": {
+        "symptoms": ["Early development of secondary sexual characteristics (e.g., breast development, pubic hair)", "Rapid growth", "Advanced bone age"],
+        "possible_causes": [
+          "Premature activation of the hypothalamic-pituitary-gonadal axis",
+          "Brain abnormalities (e.g., tumors, trauma, inflammation)",
+          "Genetic factors"
+        ],
+        "recommended_treatments": [
+          "Gonadotropin-releasing hormone (GnRH) analogs to delay further development",
+          "Monitoring growth and development",
+          "Treating underlying conditions (if present)"
+        ]
+      },
+      "Cerebral Palsy": {
+        "symptoms": ["Impaired movement and coordination", "Muscle stiffness or floppiness", "Involuntary movements", "Difficulty with balance and posture", "Speech and swallowing difficulties"],
+        "possible_causes": [
+          "Brain injury or abnormal brain development before, during, or shortly after birth",
+          "Infections during pregnancy",
+          "Severe jaundice in the newborn",
+          "Lack of oxygen to the brain"
+        ],
+        "recommended_treatments": [
+          "Physical therapy",
+          "Occupational therapy",
+          "Speech therapy",
+          "Medications to manage symptoms",
+          "Surgical interventions (in some cases)"
+        ]
+      },
+      "Cervical Cancer": {
+        "symptoms": ["Abnormal vaginal bleeding", "Pelvic pain", "Pain during intercourse", "Unusual vaginal discharge"],
+        "possible_causes": [
+          "Persistent infection with high-risk human papillomavirus (HPV)",
+          "Smoking",
+          "Weakened immune system",
+          "Long-term use of oral contraceptives",
+          "Multiple full-term pregnancies"
+        ],
+        "recommended_treatments": [
+          "Surgery (e.g., hysterectomy, removal of lymph nodes)",
+          "Radiation therapy",
+          "Chemotherapy",
+          "Targeted therapy",
+          "Immunotherapy"
+        ]
+      },
+      "Cervical Dysplasia": {
+        "symptoms": ["Usually no symptoms", "Abnormal Pap smear results"],
+        "possible_causes": [
+          "Human papillomavirus (HPV) infection",
+          "Smoking",
+          "Weakened immune system",
+          "Multiple sexual partners"
+        ],
+        "recommended_treatments": [
+          "Watchful waiting and repeat Pap smears",
+          "Cryotherapy",
+          "Laser therapy",
+          "Loop electrosurgical excision procedure (LEEP)",
+          "Cone biopsy"
+        ]
+      },
+      "Cervical Dystonia": {
+        "symptoms": ["Involuntary muscle contractions in the neck", "Abnormal head posture", "Neck pain", "Tremor"],
+        "possible_causes": [
+          "Genetic factors",
+          "Nervous system injury",
+          "Unknown causes (idiopathic)"
+        ],
+        "recommended_treatments": [
+          "Botulinum toxin injections",
+          "Physical therapy",
+          "Medications (e.g., muscle relaxants, pain relievers)",
+          "Surgical interventions (in severe cases)"
+        ]
+      },
+      "Cervical Spondylotic Myelopathy (CSM)": {
+        "symptoms": ["Neck pain and stiffness", "Weakness in arms and hands", "Loss of coordination", "Numbness or tingling in extremities", "Difficulty walking"],
+        "possible_causes": [
+          "Degenerative changes in the cervical spine",
+          "Disc herniation",
+          "Bone spurs",
+          "Thickening of ligaments"
+        ],
+        "recommended_treatments": [
+          "Physical therapy",
+          "Medications (e.g., pain relievers, anti-inflammatory drugs)",
+          "Corticosteroid injections",
+          "Surgical decompression"
+        ]
+      },
+      "Chickenpox": {
+        "symptoms": ["Itchy rash with red spots and blisters", "Fever", "Fatigue", "Loss of appetite", "Headache"],
+        "possible_causes": [
+          "Varicella-zoster virus (VZV) infection",
+          "Direct contact with an infected person"
+        ],
+        "recommended_treatments": [
+          "Calamine lotion for itching",
+          "Antihistamines",
+          "Pain relievers (e.g., acetaminophen)",
+          "Antiviral medications (in severe cases)",
+          "Rest and hydration"
+        ]
+      },
+      "Chlamydia": {
+        "symptoms": ["Often asymptomatic", "Painful urination", "Lower abdominal pain", "Vaginal or penile discharge", "Pain during intercourse (women)", "Testicular pain (men)"],
+        "possible_causes": [
+          "Bacterial infection with Chlamydia trachomatis",
+          "Unprotected sexual contact with an infected person"
+        ],
+        "recommended_treatments": [
+          "Antibiotics (e.g., azithromycin, doxycycline)",
+          "Abstinence from sexual activity until treatment is completed",
+          "Testing and treatment of sexual partners"
+        ]
+      },
+      "Chronic Bronchitis": {
+        "symptoms": ["Persistent cough with mucus", "Shortness of breath", "Frequent respiratory infections", "Wheezing", "Fatigue"],
+        "possible_causes": [
+          "Cigarette smoking",
+          "Air pollution",
+          "Dust and toxic gases",
+          "Chronic respiratory infections"
+        ],
+        "recommended_treatments": [
+          "Smoking cessation",
+          "Bronchodilators",
+          "Steroids",
+          "Pulmonary rehabilitation",
+          "Oxygen therapy"
+        ]
+      },
+      "Chronic Cough": {
+        "symptoms": ["Persistent cough lasting eight weeks or longer", "Sensation of a lump in the throat", "Wheezing", "Shortness of breath", "Heartburn or sour taste in mouth"],
+        "possible_causes": [
+          "Postnasal drip",
+          "Asthma",
+          "Gastroesophageal reflux disease (GERD)",
+          "Chronic bronchitis",
+          "Infections",
+          "Medications (e.g., ACE inhibitors)"
+        ],
+        "recommended_treatments": [
+          "Treating underlying conditions",
+          "Cough suppressants",
+          "Antihistamines for allergies",
+          "Proton pump inhibitors for GERD",
+          "Inhaled asthma medications"
+        ]
+      },
+      "Chronic Fatigue Syndrome": {
+        "symptoms": ["Severe fatigue", "Sleep problems", "Memory or concentration issues", "Muscle or joint pain", "Headaches", "Sore throat", "Enlarged lymph nodes"],
+        "possible_causes": [
+          "Exact cause unknown",
+          "Viral infections",
+          "Immune system problems",
+          "Hormonal imbalances",
+          "Physical or emotional trauma"
+        ],
+        "recommended_treatments": [
+          "Graded exercise therapy (GET)",
+          "Cognitive behavioral therapy (CBT)",
+          "Medications for pain, sleep, or other symptoms",
+          "Lifestyle changes (e.g., stress management, diet)"
+        ]
+      },
+      "Chronic Kidney Disease (CKD)": {
+        "symptoms": ["Fatigue", "Swelling in legs, ankles, or feet", "Shortness of breath", "Nausea", "Confusion", "High blood pressure", "Decreased urine output"],
+        "possible_causes": [
+          "Diabetes",
+          "High blood pressure",
+          "Glomerulonephritis",
+          "Polycystic kidney disease",
+          "Prolonged obstruction of urinary tract",
+          "Recurrent kidney infections"
+        ],
+        "recommended_treatments": [
+          "Control underlying conditions",
+          "Medications to protect kidneys",
+          "Dietary changes (e.g., low salt, low protein)",
+          "Dialysis",
+          "Kidney transplant"
+        ]
+      },
+      "Chronic Obstructive Pulmonary Disease (COPD)": {
+        "symptoms": ["Chronic cough", "Shortness of breath", "Frequent respiratory infections", "Wheezing", "Fatigue"],
+        "possible_causes": [
+          "Cigarette smoking",
+          "Long-term exposure to lung irritants (e.g., air pollution, chemical fumes)",
+          "Alpha-1 antitrypsin deficiency"
+        ],
+        "recommended_treatments": [
+          "Smoking cessation",
+          "Bronchodilators",
+          "Inhaled steroids",
+          "Pulmonary rehabilitation",
+          "Oxygen therapy",
+          "Surgery (in severe cases)"
+        ]
+      },
+      "Chronic Pain": {
+        "symptoms": ["Pain lasting longer than three months", "Aching, burning, or shooting pain", "Fatigue", "Sleep disturbances", "Reduced flexibility, strength, and endurance"],
+        "possible_causes": [
+          "Injury",
+          "Surgery",
+          "Nerve damage",
+          "Chronic conditions (e.g., arthritis, fibromyalgia)",
+          "Psychological factors"
+        ],
+        "recommended_treatments": [
+          "Medications (e.g., pain relievers, antidepressants, anticonvulsants)",
+          "Physical therapy",
+          "Psychological counseling",
+          "Lifestyle changes (e.g., exercise, stress management)",
+          "Alternative therapies (e.g., acupuncture, chiropractic care)"
+        ]
+      },
+      "Chronic Pelvic Pain": {
+        "symptoms": ["Severe and steady pain", "Intermittent pain", "Dull aching", "Sharp pains or cramping", "Pressure or heaviness deep in the pelvis"],
+        "possible_causes": [
+          "Endometriosis",
+          "Chronic pelvic inflammatory disease",
+          "Ovarian cysts",
+          "Fibroids",
+          "Irritable bowel syndrome",
+          "Interstitial cystitis"
+        ],
+        "recommended_treatments": [
+          "Pain relievers",
+          "Hormone treatments",
+          "Antibiotics (if infection is present)",
+          "Physical therapy",
+          "Psychological counseling",
+          "Surgery (in severe cases)"
+        ]
+      },
+      "Cirrhosis and Portal Hypertension": {
+        "symptoms": ["Fatigue", "Easy bruising", "Itchy skin", "Jaundice", "Fluid buildup in the abdomen (ascites)", "Loss of appetite", "Nausea"],
+        "possible_causes": [
+          "Chronic alcohol abuse",
+          "Chronic viral hepatitis (B, C, and D)",
+          "Fat accumulating in the liver (nonalcoholic fatty liver disease)",
+          "Iron buildup in the body (hemochromatosis)",
+          "Cystic fibrosis"
+        ],
+        "recommended_treatments": [
+          "Avoiding alcohol",
+          "Medications to manage symptoms",
+          "Low-sodium diet",
+          "Diuretics",
+          "Liver transplant (in severe cases)"
+        ]
+      },
+      "Cleft Lip and Cleft Palate": {
+        "symptoms": ["A split in the lip and roof of the mouth that can affect one or both sides of the face", "Difficulty with feeding", "Speech difficulties", "Ear infections"],
+        "possible_causes": [
+          "Genetic factors",
+          "Environmental factors (e.g., exposure to certain substances during pregnancy)",
+          "Nutritional deficiencies during pregnancy",
+          "Certain medications taken during pregnancy"
+        ],
+        "recommended_treatments": [
+          "Surgery to repair the cleft lip and/or palate",
+          "Speech therapy",
+          "Orthodontic treatments",
+          "Hearing aids (if necessary)"
+        ]
+      },
+      "Club Drug Use": {
+        "symptoms": ["Altered mental state", "Increased sensory perception", "Hallucinations", "Nausea", "Chills or sweating", "Muscle cramping", "Teeth clenching"],
+        "possible_causes": [
+          "Recreational use of drugs such as MDMA (Ecstasy), GHB, Rohypnol, ketamine, and LSD"
+        ],
+        "recommended_treatments": [
+          "Behavioral therapy",
+          "Counseling",
+          "Detoxification programs",
+          "Support groups",
+          "Medical supervision in severe cases"
+        ]
+      },
+      "Clubfoot": {
+        "symptoms": ["Foot appears twisted or out of shape", "Calf muscles in the affected leg are usually underdeveloped", "Foot may be shorter than the other foot"],
+        "possible_causes": [
+          "Genetic factors",
+          "Environmental factors during pregnancy",
+          "Maternal smoking during pregnancy",
+          "Insufficient amniotic fluid during pregnancy"
+        ],
+        "recommended_treatments": [
+          "Stretching and casting (Ponseti method)",
+          "Surgery to adjust tendons, ligaments, and joints",
+          "Physical therapy",
+          "Orthopedic devices or braces"
+        ]
+      },
+      "Colds and the Flu": {
+        "symptoms": ["Runny or stuffy nose", "Sore throat", "Cough", "Congestion", "Body aches", "Headache", "Fever", "Fatigue"],
+        "possible_causes": [
+          "Viruses such as rhinoviruses (colds) and influenza viruses (flu)"
+        ],
+        "recommended_treatments": [
+          "Rest",
+          "Hydration",
+          "Over-the-counter medications to relieve symptoms",
+          "Antiviral drugs (for flu)",
+          "Good hygiene practices to prevent spread"
+        ]
+      },
+      "Colic": {
+        "symptoms": ["Intense crying for no apparent reason", "Crying for 3 hours or more per day, at least 3 days per week, for 3 weeks or longer", "Crying often occurs in the evening"],
+        "possible_causes": [
+          "Digestive system that isn't fully developed",
+          "Imbalance of healthy bacteria in the digestive tract",
+          "Food allergies or intolerances",
+          "Overfeeding, underfeeding or infrequent burping"
+        ],
+        "recommended_treatments": [
+          "Comforting the baby (e.g., holding, rocking)",
+          "Feeding changes",
+          "Medications to relieve gas",
+          "Soothing techniques (e.g., warm baths, soft music)"
+        ]
+      },
+      "Colorectal Cancer": {
+        "symptoms": ["Changes in bowel habits", "Blood in the stool", "Persistent abdominal discomfort", "Weakness or fatigue", "Unexplained weight loss"],
+        "possible_causes": [
+          "Genetic mutations",
+          "Lifestyle factors (e.g., diet, smoking, heavy alcohol use)",
+          "Family history of colorectal cancer",
+          "Inflammatory intestinal conditions",
+          "Certain inherited syndromes (e.g., Lynch syndrome, familial adenomatous polyposis)"
+        ],
+        "recommended_treatments": [
+          "Surgery",
+          "Radiation therapy",
+          "Chemotherapy",
+          "Targeted drug therapy",
+          "Immunotherapy"
+        ]
+      },
+      "Complex Regional Pain Syndrome": {
+        "symptoms": ["Prolonged severe pain", "Changes in skin color, temperature, and swelling in the affected area", "Sensitivity to touch or cold", "Changes in hair and nail growth"],
+        "possible_causes": [
+          "Injury or trauma",
+          "Surgery",
+          "Heart attack",
+          "Stroke"
+        ],
+        "recommended_treatments": [
+          "Pain relievers",
+          "Physical therapy",
+          "Sympathetic nerve blocks",
+          "Medications for nerve pain",
+          "Spinal cord stimulation"
+        ]
+      },
+      "Concussion": {
+        "symptoms": ["Headache", "Temporary loss of consciousness", "Confusion", "Dizziness", "Nausea or vomiting", "Slurred speech", "Fatigue"],
+        "possible_causes": [
+          "Blow to the head",
+          "Violent shaking of the head or upper body"
+        ],
+        "recommended_treatments": [
+          "Rest",
+          "Avoidance of physical and mental stress",
+          "Gradual return to regular activities",
+          "Pain relievers for headaches"
+        ]
+      },
+      "Congenital Adrenal Hyperplasia": {
+        "symptoms": ["Ambiguous genitalia in female infants", "Early signs of puberty", "Rapid growth during childhood but shorter than average final height", "Severe acne"],
+        "possible_causes": [
+          "Genetic mutations affecting adrenal gland function"
+        ],
+        "recommended_treatments": [
+          "Hormone replacement therapy",
+          "Medications to manage symptoms",
+          "Surgery to correct genital abnormalities"
+        ]
+      },
+      "Congenital Heart Disease": {
+        "symptoms": ["Rapid breathing", "Cyanosis (bluish tint to the skin, lips, and fingernails)", "Fatigue", "Poor blood circulation", "Swelling in the legs, abdomen, or areas around the eyes"],
+        "possible_causes": [
+          "Genetic mutations",
+          "Chromosomal abnormalities",
+          "Environmental factors (e.g., maternal illness, medication use during pregnancy)"
+        ],
+        "recommended_treatments": [
+          "Medications to manage symptoms",
+          "Catheter-based procedures",
+          "Open-heart surgery",
+          "Heart transplant (in severe cases)"
+        ]
+      },
+      "Constipation": {
+        "symptoms": ["Infrequent bowel movements", "Hard or lumpy stools", "Straining during bowel movements", "Feeling of blockage in the rectum", "Feeling of incomplete evacuation"],
+        "possible_causes": [
+          "Low fiber diet",
+          "Dehydration",
+          "Lack of physical activity",
+          "Certain medications",
+          "Changes in routine",
+          "Ignoring the urge to have a bowel movement"
+        ],
+        "recommended_treatments": [
+          "Increasing fiber intake",
+          "Drinking plenty of fluids",
+          "Regular physical activity",
+          "Over-the-counter laxatives",
+          "Prescription medications (in severe cases)"
+        ]
+      },
+      "Corneal Abrasions": {
+        "symptoms": ["Pain", "Redness", "Tearing", "Blurred vision", "Sensitivity to light", "Feeling of something in the eye"],
+        "possible_causes": [
+          "Foreign objects in the eye",
+          "Scratches from fingernails or makeup brushes",
+          "Prolonged contact lens wear",
+          "Trauma to the eye"
+        ],
+        "recommended_treatments": [
+          "Rinsing the eye with clean water or saline solution",
+          "Antibiotic eye drops or ointments",
+          "Pain relievers",
+          "Avoiding rubbing the eye",
+          "Wearing an eye patch to protect the eye"
+        ]
+      },
+      "Coronary Artery Disease (CAD)": {
+        "symptoms": ["Chest pain (angina)", "Shortness of breath", "Fatigue", "Heart attack"],
+        "possible_causes": [
+          "Atherosclerosis (buildup of plaque in the coronary arteries)",
+          "High blood pressure",
+          "High cholesterol",
+          "Smoking",
+          "Diabetes",
+          "Sedentary lifestyle",
+          "Unhealthy diet"
+        ],
+        "recommended_treatments": [
+          "Lifestyle changes (e.g., diet, exercise, quitting smoking)",
+          "Medications to manage symptoms and reduce risk factors",
+          "Procedures such as angioplasty and stent placement",
+          "Coronary artery bypass surgery"
+        ]
+      },
+      "Coronavirus (COVID-19)": {
+        "symptoms": ["Fever", "Cough", "Shortness of breath", "Fatigue", "Muscle or body aches", "Loss of taste or smell", "Sore throat", "Congestion or runny nose", "Nausea or vomiting", "Diarrhea"],
+        "possible_causes": [
+          "Infection with the SARS-CoV-2 virus"
+        ],
+        "recommended_treatments": [
+          "Rest",
+          "Hydration",
+          "Over-the-counter medications to relieve symptoms",
+          "Isolation to prevent spread",
+          "Medical treatment for severe cases (e.g., hospitalization, oxygen therapy)"
+        ]
+      },
+      "Coronavirus Disease 2019 (COVID-19)": {
+        "symptoms": ["Fever", "Cough", "Shortness of breath", "Fatigue", "Muscle or body aches", "Loss of taste or smell", "Sore throat", "Congestion or runny nose", "Nausea or vomiting", "Diarrhea"],
+        "possible_causes": [
+          "Infection with the SARS-CoV-2 virus"
+        ],
+        "recommended_treatments": [
+          "Rest",
+          "Hydration",
+          "Over-the-counter medications to relieve symptoms",
+          "Isolation to prevent spread",
+          "Medical treatment for severe cases (e.g., hospitalization, oxygen therapy)"
+        ]
+      },
+      "Crohn’s Disease": {
+        "symptoms": ["Diarrhea", "Abdominal pain and cramping", "Fatigue", "Weight loss", "Malnutrition", "Blood in the stool"],
+        "possible_causes": [
+          "Immune system malfunction",
+          "Genetics",
+          "Environmental factors"
+        ],
+        "recommended_treatments": [
+          "Anti-inflammatory drugs",
+          "Immune system suppressors",
+          "Antibiotics",
+          "Dietary changes",
+          "Surgery"
+        ]
+      },
+      "Croup": {
+        "symptoms": ["Barking cough", "Hoarseness", "Fever", "Runny nose", "Stridor (a high-pitched wheezing sound during breathing)"],
+        "possible_causes": [
+          "Viral infection (e.g., parainfluenza virus)"
+        ],
+        "recommended_treatments": [
+          "Exposure to moist air or steam",
+          "Keeping the child calm and comfortable",
+          "Hydration",
+          "Medications to reduce airway swelling (e.g., steroids)",
+          "Hospitalization in severe cases"
+        ]
+      },
+      "Cushing's Syndrome": {
+        "symptoms": ["Weight gain", "Fatigue", "Muscle weakness", "High blood pressure", "Mood swings", "Irregular periods", "Increased thirst and urination", "Thinning of the skin"],
+        "possible_causes": [
+          "Excessive cortisol production by the adrenal glands",
+          "Long-term use of corticosteroid medications",
+          "Pituitary gland tumors",
+          "Adrenal gland tumors"
+        ],
+        "recommended_treatments": [
+          "Gradual reduction of corticosteroid medications",
+          "Surgery to remove tumors",
+          "Medications to block cortisol production",
+          "Radiation therapy"
+        ]
+      },
+      "Cystic Fibrosis (CF)": {
+        "symptoms": ["Persistent cough", "Frequent lung infections", "Wheezing", "Shortness of breath", "Poor growth", "Frequent greasy, bulky stools", "Salty-tasting skin"],
+        "possible_causes": [
+          "Inherited genetic mutation in the CFTR gene",
+          "Abnormalities in the CFTR protein"
+        ],
+        "recommended_treatments": [
+          "Airway clearance techniques",
+          "Medications to thin mucus and improve lung function",
+          "Antibiotics to treat lung infections",
+          "Pancreatic enzyme supplements",
+          "Nutritional support"
+        ]
+      },
+      "Cytomegalovirus": {
+        "symptoms": ["Fever", "Fatigue", "Sore throat", "Swollen glands", "Muscle aches", "Loss of appetite", "Jaundice", "Vision problems"],
+        "possible_causes": [
+          "Infection with the cytomegalovirus (CMV)"
+        ],
+        "recommended_treatments": [
+          "Antiviral medications (for severe cases)",
+          "Rest",
+          "Hydration",
+          "Pain relievers"
+        ]
+      },
+      "De Quervain’s Tenosynovitis": {
+        "symptoms": ["Pain and swelling near the base of the thumb", "Difficulty moving the thumb and wrist"],
+        "possible_causes": [
+          "Overuse or repetitive hand motions",
+          "Injury to the thumb or wrist"
+        ],
+        "recommended_treatments": [
+          "Resting the affected thumb and wrist",
+          "Splinting",
+          "Applying ice",
+          "Anti-inflammatory medications",
+          "Physical therapy",
+          "Steroid injections (in severe cases)"
+        ]
+      },
+      "Deep Vein Thrombosis": {
+        "symptoms": ["Swelling", "Pain", "Redness", "Warmth", "Tenderness", "Visible veins"],
+        "possible_causes": [
+          "Blood clot formation in a deep vein, often in the legs"
+        ],
+        "recommended_treatments": [
+          "Anticoagulant medications",
+          "Thrombolytic therapy (in severe cases)",
+          "Compression stockings",
+          "Elevating the affected limb",
+          "Surgical intervention (in some cases)"
+        ]
+      },
+      "Dementia": {
+        "symptoms": ["Memory loss", "Difficulty communicating", "Difficulty with complex tasks", "Disorientation", "Personality changes", "Agitation", "Difficulty reasoning or problem-solving"],
+        "possible_causes": [
+          "Neurodegenerative diseases (e.g., Alzheimer's disease, Parkinson's disease)",
+          "Vascular disorders",
+          "Traumatic brain injury",
+          "Infections",
+          "Medication side effects",
+          "Metabolic disorders"
+        ],
+        "recommended_treatments": [
+          "Medications to manage symptoms (e.g., cholinesterase inhibitors, memantine)",
+          "Therapies to improve cognition and function",
+          "Supportive care",
+          "Treatment of underlying causes when possible"
+        ]
+      },
+      "Depression": {
+        "symptoms": ["Persistent sadness", "Loss of interest or pleasure in activities", "Changes in appetite or weight", "Sleep disturbances", "Fatigue or loss of energy", "Feelings of worthlessness or guilt", "Difficulty concentrating", "Thoughts of death or suicide"],
+        "possible_causes": [
+          "Genetic factors",
+          "Brain chemistry and neurotransmitter imbalances",
+          "Hormonal changes",
+          "Life events and stressors",
+          "Medical conditions",
+          "Medications"
+        ],
+        "recommended_treatments": [
+          "Psychotherapy (e.g., cognitive-behavioral therapy)",
+          "Medications (e.g., antidepressants)",
+          "Lifestyle changes (e.g., exercise, stress management)",
+          "Support groups",
+          "Electroconvulsive therapy (in severe cases)"
+        ]
+      },
+      "Diabetes": {
+        "symptoms": ["Frequent urination", "Increased thirst", "Extreme hunger", "Unexplained weight loss", "Fatigue", "Blurred vision", "Slow-healing sores", "Frequent infections", "Tingling or numbness in hands or feet"],
+        "possible_causes": [
+          "Type 1 diabetes: autoimmune destruction of insulin-producing cells in the pancreas",
+          "Type 2 diabetes: insulin resistance and inadequate insulin production",
+          "Gestational diabetes: insulin resistance during pregnancy"
+        ],
+        "recommended_treatments": [
+          "Type 1 diabetes: insulin therapy, blood sugar monitoring, and lifestyle management",
+          "Type 2 diabetes: lifestyle changes (e.g., diet, exercise), oral medications, insulin therapy",
+          "Gestational diabetes: blood sugar monitoring, diet, exercise, and sometimes insulin therapy",
+          "Monitoring and management of blood sugar levels",
+          "Healthy diet low in sugar and carbohydrates",
+          "Regular exercise",
+          "Medications to control blood sugar levels",
+          "Insulin therapy (if necessary)",
+          "Regular check-ups with healthcare provider"
+        ]
+      }
+}

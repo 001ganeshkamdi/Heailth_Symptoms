@@ -1,0 +1,145 @@
+:root {
+    --primary-color: #007bff; /* Default blue color */
+    --secondary-color: #261818; /* Default dark gray color */
+    --background-light: #6c6cf498; /* Default light blue background */
+    --box-shadow-color: rgba(39, 42, 192, 0.942); /* Default box shadow color */
+  }
+
+  body.dark {
+    --primary-color: #BB86FC; /* Adjust primary color for dark mode */
+    --secondary-color: #998c8c; /* Adjust secondary color for dark mode */
+    --background-light: #2c272e; /* Adjust background color for dark mode */
+    --box-shadow-color: rgba(215, 207, 226, 0.971); /* Adjust box shadow color for dark mode */
+   
+  }
+  
+  section {
+    background-color: var(--background-light);   
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--box-shadow-color);
+    padding: 30px;
+    max-width: 50%;
+    margin-bottom: 40px;
+  }
+  
+  h2 {
+    color: var(--primary-color); /* Use primary color */
+    margin-top: 0;
+  }
+  
+  p {
+    color: var(--secondary-color); /* Use secondary color */
+    line-height: 1.6;
+  }
+  
+  /* CSS for the welcome box */
+  .welcome-box {
+    background-color: var(--background-light); /* Use background color variable */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--box-shadow-color);
+    padding: 5px;
+    margin-top: 90px;
+    margin-bottom: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+  }
+  .welcome-box ul {
+    list-style: none;
+    text-align: center;
+    margin-left: 30%;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.welcome-box ul li {
+  text-align: center;
+    position: relative;
+}
+
+.welcome-box ul li a {
+    display: block;
+    padding: 15px 30px;
+    background-color: var(--nav-color);
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.welcome-box ul li a:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+    .welcome-box ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .welcome-box ul li a {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+  .welcome-box h1 {
+    color: var(--primary-color); /* Use primary color */
+    margin-bottom: 10px;
+    font-size: 28px; /* Adjust the font size as needed */
+  }
+  
+  .welcome-box p {
+    color: var(--secondary-color); /* Use secondary color */
+    font-size: 16px; /* Adjust the font size as needed */
+    line-height: 1.6;
+    padding: 5px;
+  }
+  .make_box {
+    background-color: rgba(240, 248, 255, 0.399);
+    display: flex;
+    justify-content: center; /* Align boxes horizontally */
+    align-items: center; /* Align boxes vertically */
+}
+
+.make_box {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center; /* Align boxes horizontally */
+  align-items: center; /* Align boxes vertically */
+}
+
+.make_box_1,
+.make_box_2 {
+  padding: 20px;
+  margin: 20px;
+  text-align: justify;
+  border-radius: 8px;
+  max-width: 50%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Include box-shadow in transition */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.756); /* Add shadow */
+}
+
+.make_box_1:hover,
+.make_box_2:hover {
+  transform: scale(1.05); /* Increase size on hover */
+  box-shadow: 0px 8px 20px rgba(77, 19, 195, 0.814); /* Increase shadow on hover */
+}
+
+.make_box_2 img {
+  max-width: 100%;
+}
+
+/* Additional styling for make_box_1 */
+.make_box_1 {
+  background-color: #b9b9c4;
+}
+
+/* Additional styling for make_box_2 */
+.make_box_2 {
+  background-color: #babae6;
+}

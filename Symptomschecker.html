@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symptom Checker</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="design.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+  <style>
+    
+    body {
+    background-color: #4C4CAF;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%236767b4' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%238282b9' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%239b9bc0' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23b3b3c9' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23c8c8d3' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23dcdce0' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23EEE' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+    }
+  
+
+    
+        :root {
+    --primary-color: #007bff; /* Default blue color */
+    --secondary-color: #261818; /* Default dark gray color */
+    --background-light: #6c6cf498; /* Default light blue background */
+    --box-shadow-color: rgba(39, 42, 192, 0.942); /* Default box shadow color */
+  }
+
+  body.dark {
+    background-color: #000000;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23222222' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23444444' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23666666' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23888888' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23aaaaaa' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23cccccc' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23EEE' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+    --primary-color: #BB86FC; /* Adjust primary color for dark mode */
+    --secondary-color: #998c8c; /* Adjust secondary color for dark mode */
+    --background-light: #2c272e; /* Adjust background color for dark mode */
+    --box-shadow-color: rgba(215, 207, 226, 0.971); /* Adjust box shadow color for dark mode */
+   
+  }
+
+    .container-fluid {
+      background-color: #4c4cafa9; /* Semi-transparent background color */
+      padding: 20px;
+      max-width: 70%;
+      border-radius: 10px; /* Rounded corners */
+    }
+
+    h1 {
+      text-align: center;
+      color: #fff; /* White text color */
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #fff; /* White text color */
+    }
+
+    input[type="text"] {
+      border-radius: 5px;
+      width: 85%;
+      padding: 10px;
+      font-size: 16px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    input[type="text"]:focus {
+      border-color: #7300ff;
+      box-shadow: 0 0 10px rgba(115, 0, 255, 0.5);
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #7300ff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    #result {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #f4eded;
+      border-radius: 5px;
+      animation: fadeIn 0.5s ease-in-out;
+      background-color: #ffffff; /* White background color for results */
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    td a {
+      color: #007bff;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+    }
+
+    td a:hover {
+      color: #0056b3;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+    <script src="home.js" defer></script>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen'></i>
+            <span class="logo navLogo"><a href="#">Health Symptoms</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Health Symptoms</a></span>
+                    <i class='bx bx-x sidebarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="Diseases and Conditions.html">Diseases and Conditions</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <div class="container-fluid">
+        <h1>Symptom Checker</h1>
+        <form id="symptomForm">
+          <label for="symptom">Enter your symptoms (comma separated):</label>
+          <input type="text" id="symptom" required>
+          <button type="submit">Check</button>
+        </form>
+        <div id="result"></div>
+      </div>
+    
+
+  <script >
+
+    document.getElementById('symptomForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const diseases = data.diseases;
+                const enteredSymptoms = document.getElementById('symptom').value.toLowerCase().split(',');
+                const resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = ''; // Clear previous results
+
+                const matchingDiseases = diseases.filter(disease => {
+                    return enteredSymptoms.every(enteredSymptom => {
+                        return disease.symptoms.some(symptom => symptom.toLowerCase().includes(enteredSymptom.trim()));
+                    });
+                });
+
+                if (matchingDiseases.length > 0) {
+                    const table = document.createElement('table');
+                    table.style.width = '100%';
+                    table.style.borderCollapse = 'collapse';
+
+                    const headerRow = document.createElement('tr');
+                    headerRow.innerHTML = `
+                        <th style="border: 1px solid #ccc; padding: 8px;">Sr No.</th>
+                        <th style="border: 1px solid #ccc; padding: 8px;">Disease</th>
+                        <th style="border: 1px solid #ccc; padding: 8px;">Symptoms</th>
+                    `;
+                    table.appendChild(headerRow);
+
+                    matchingDiseases.forEach((disease, index) => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">${index + 1}</td>
+                            <td style="border: 1px solid #ccc; padding: 8px;">
+                                <a href="${disease.link}" target="_blank" style="color: #007bff; text-decoration: none;">
+                                    ${disease.name}
+                                </a>
+                            </td>
+                            <td style="border: 1px solid #ccc; padding: 8px;">
+                                <ul style="padding-left: 20px; margin: 0;">
+                                    ${disease.symptoms.map(symptom => `<li>${symptom}</li>`).join('')}
+                                </ul>
+                            </td>
+                        `;
+                        table.appendChild(row);
+                    });
+
+                    resultDiv.appendChild(table);
+                } else {
+                    resultDiv.textContent = "No matching diseases found.";
+                }
+            })
+            .catch(error => console.error('Error loading JSON:', error));
+    });
+ 
+  </script>
+      <footer>
+        <div class="social-icons">
+            <i class="fa fa-envelope" style="font-size:36px"></i>
+            <i class="fa fa-twitter" style="font-size:36px"></i>
+            <i class="fa fa-youtube-play" style="font-size:36px"></i>
+        </div>
+        <div class="developer-info">
+            <p>Site developed by: I,me&Myselflimited</p>
+            <p>Contact: Imemyself@egmail.com</p>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2024 Imeandmyself. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

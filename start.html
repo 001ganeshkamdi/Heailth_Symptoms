@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Symptoms</title>
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="home.js" defer></script>
+<style>
+    :root {
+    --primary-color: #007bff; /* Default blue color */
+    --secondary-color: #261818; /* Default dark gray color */
+    --background-light: #6c6cf498; /* Default light blue background */
+    --box-shadow-color: rgba(39, 42, 192, 0.942); /* Default box shadow color */
+  }
+
+  body.dark {
+    --primary-color: #BB86FC; /* Adjust primary color for dark mode */
+    --secondary-color: #998c8c; /* Adjust secondary color for dark mode */
+    --background-light: #2c272e; /* Adjust background color for dark mode */
+    --box-shadow-color: rgba(215, 207, 226, 0.971); /* Adjust box shadow color for dark mode */
+   
+  }
+  
+  section {
+    background-color: var(--background-light);   
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--box-shadow-color);
+    padding: 30px;
+    max-width: 50%;
+    margin-bottom: 40px;
+  }
+  
+  h2 {
+    color: var(--primary-color); /* Use primary color */
+    margin-top: 0;
+  }
+  
+  p {
+    color: var(--secondary-color); /* Use secondary color */
+    line-height: 1.6;
+  }
+  
+  /* CSS for the welcome box */
+  .welcome-box {
+    background-color: var(--background-light); /* Use background color variable */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--box-shadow-color);
+    padding: 5px;
+    margin-top: 90px;
+    margin-bottom: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+  }
+  
+  .welcome-box h1 {
+    color: var(--primary-color); /* Use primary color */
+    margin-bottom: 10px;
+    font-size: 28px; /* Adjust the font size as needed */
+  }
+  
+  .welcome-box p {
+    color: var(--secondary-color); /* Use secondary color */
+    font-size: 16px; /* Adjust the font size as needed */
+    line-height: 1.6;
+    padding: 5px;
+  }
+  .make_box {
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center; /* Align boxes horizontally */
+    align-items: center; /* Align boxes vertically */
+}
+
+.make_box {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center; /* Align boxes horizontally */
+  align-items: center; /* Align boxes vertically */
+}
+
+.make_box_1,
+.make_box_2 {
+  padding: 20px;
+  margin: 20px;
+  text-align: justify;
+  border-radius: 8px;
+  max-width: 50%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Include box-shadow in transition */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.756); /* Add shadow */
+}
+
+.make_box_1:hover,
+.make_box_2:hover {
+  transform: scale(1.05); /* Increase size on hover */
+  box-shadow: 0px 8px 20px rgba(77, 19, 195, 0.814); /* Increase shadow on hover */
+}
+
+.make_box_2 img {
+  max-width: 100%;
+}
+
+/* Additional styling for make_box_1 */
+.make_box_1 {
+  background-color: #b9b9c4;
+}
+
+/* Additional styling for make_box_2 */
+.make_box_2 {
+  background-color: #babae6;
+}
+
+    
+.make{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 60px;
+  background-color: #6c6cf498; /* Adjusted background color */
+  color: #30475e; /* Adjusted text color */
+  padding: 20px 0;
+}
+
+.make nav a{
+  color: #30475e; /* Adjusted text color */
+  margin-right: 30px;
+  font-weight: 500;
+}
+
+.make div.sign-in-up button{
+  background-color: #75cfb8; /* Kept original color */
+  font-size: 16px;
+  font-weight: 550;
+  padding: 4px 12px;
+  border: 2px solid #30475e; /* Adjusted border color */
+  border-radius: 5px;
+  outline: none;
+  margin-left: 20px;
+}
+
+.make div.sign-in-up button:last-child{
+  background-color: #fa9579; /* Kept original color */
+}
+
+.popup-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+div.popup-container div.popup{
+  background-color: #f0f0f0;
+  width: 350px;
+  border-radius: 5px;
+  padding: 20px 25px 30px 25px;
+}
+
+div.popup-container div.popup h2{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  color: #30475e; /* Adjusted text color */
+}
+
+div.popup-container div.popup h2 button{
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 18px;
+  font-weight: 550;
+  color: #797775;
+}
+
+div.popup-container div.popup input{
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #30475e; /* Adjusted border color */
+  border-radius: 0;
+  padding: 5px 0;
+  font-weight: 550;
+  font-size: 14px;
+  outline: none;
+}
+
+div.popup-container div.popup button.login-btn,
+div.popup-container div.register button.register-btn{
+  font-weight: 550;
+  font-style: 15px;
+  color: white;
+  background-color: #30475e; /* Adjusted background color */
+  padding: 4px 10px;
+  border: none;
+  outline: none;
+  margin-top: 5px;
+}
+
+div.popup-container div.register{
+  background-color: #edeef7;
+}
+
+div.popup-container div.register h2{
+  color: #fa9579;
+}
+
+div.popup-container div.register input{
+  border-bottom-color: #fa9579;
+}
+
+div.popup-container div.register button.register-btn{
+  background-color: #fa9579;
+}
+
+div.user{
+  color: #30475e; /* Adjusted text color */
+  background-color: #75cfb8; /* Kept original color */
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+div.user a{
+  color: #30475e; /* Adjusted text color */
+}
+
+</style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-bar">
+            <i class="bx bx-menu sidebarOpen"></i>
+            <span class="logo navLogo"><a href="#">Health Symptoms</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Health Symptoms</a></span>
+                    <i class='bx bx-x sidebarClose'> </i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="Diseases and Conditions.html">Diseases and Conditions</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <div class="make">
+    <div class='sign-in-up'>
+        <button type='button' onclick="popup('login-popup')">LOGIN</button>
+        <button type='button' onclick="popup('register-popup')">REGISTER</button>
+    </div>
+    </div>
+
+
+    <div class="popup-container" id="login-popup">
+      <div class="login popup">
+          <form method="POST" action="check_login.php">
+              <h2>
+                  <span>USER LOGIN</span>
+                  <button type="reset" onclick="popup('login-popup')">X</button>
+              </h2>
+              <div class="input-group">
+                  <label for="login-email"></label>
+                  <input type="email" id="login-email" name="email" placeholder="Enter your email">
+              </div>
+              <div class="input-group">
+                  <label for="login-password"></label>
+                  <input type="password" id="login-password" name="password" placeholder="Enter your password">
+              </div>
+              <button type="submit" class="login-btn" name="login" onclick="loginUser()">LOGIN</button>
+          </form>
+      </div>
+  </div>
+  
+  <div class="popup-container" id="register-popup">
+    <div class="register popup">
+        <form method="POST" action="user_registration.php">
+            <h2>
+                <span>USER REGISTER</span>
+                <button type="reset" onclick="popup('register-popup')">X</button>
+            </h2>
+            <div class="input-group">
+                <label for="fullname"></label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your name">
+            </div>
+            <div class="input-group">
+                <label for="username"></label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+            </div>
+            <div class="input-group">
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+            </div>
+            <div class="input-group">
+                <label for="phone"></label>
+                <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
+            </div>
+            <div class="input-group">
+                <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+            </div>
+            <div class="input-group">
+                <label for="confirm-password"></label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
+            </div>
+            <button type="submit" class="register-btn" name="register" onclick="registerUser()">Register</button>
+        </form>
+    </div>
+</div>
+
+
+    <script>
+        function popup(popup_name) {
+            get_popup = document.getElementById(popup_name);
+            if (get_popup.style.display == "flex") {
+                get_popup.style.display = "none";
+            } else {
+                get_popup.style.display = "flex";
+            }
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/login.js"></script>
+        <script src="js/register.js"></script>
+
+    <div class="welcome-box"><br>
+        <div class="welcome-box section">
+            <h2 style="text-align: center;">Welcome to Health Symptoms</h2>
+            <p>Explore a comprehensive database of health symptoms, diseases, and conditions. Our website provides
+                valuable
+                information to help you understand various symptoms, their possible causes, and recommended treatments.
+                Whether
+                you're looking to learn more about a specific symptom or seeking guidance on managing a health
+                condition, we're
+                here to empower you with knowledge and resources.</p>
+        </div>
+        <div class="make_box">
+            <div class="make_box_1">
+                <h2 style="text-align: center;">Early Detection of Health Issues</h2>
+                <p>Many serious health conditions, such as cancer, heart disease, and diabetes, often have subtle or
+                    even no
+                    symptoms in their early stages. Regularly checking health symptoms can help identify potential
+                    problems before
+                    they escalate, allowing for early intervention and better treatment outcomes.</p>
+            </div>
+            <div class="make_box_2">
+                <img src="images/image1.png" alt="early checkup">
+            </div>
+
+        </div>
+        <div class="make_box">
+            <div class="make_box_2">
+                <img src="images/Preventive-Care.jpeg" alt="early checkup">
+            </div>
+            <div class="make_box_1">
+                <h2 style="text-align: center;">Preventive Care</h2>
+                <p>Monitoring symptoms can help individuals adopt preventive measures to maintain good health and reduce
+                    the
+                    risk of developing certain conditions. This can include lifestyle changes like eating a balanced
+                    diet,
+                    exercising regularly, getting adequate sleep, and managing stress.</p>
+            </div>
+        </div>
+        <div class="make_box">
+            <div class="make_box_1">
+                <h2 style="text-align: center;">Monitoring Chronic Conditions</h2>
+                <p> For those with chronic illnesses such as asthma, hypertension, or diabetes, keeping track of
+                    symptoms is
+                    essential for managing their condition effectively. By monitoring symptoms, individuals can adjust
+                    their
+                    treatment plans as needed and seek medical assistance promptly if symptoms worsen.</p>
+            </div>
+            <div class="make_box_2">
+                <img src="images/Chronic+Diseases.jpeg" alt="early checkup">
+            </div>
+
+        </div>
+        <div class="make_box">
+            <div class="make_box_2">
+                <img src="images/benefits-of-wellness.jpg" alt="early checkup">
+            </div>
+            <div class="make_box_1">
+                <h2 style="text-align: center;">Reducing Healthcare Costs</h2>
+                <p>Early detection and preventive measures can help avoid costly medical interventions down the line. By
+                    addressing health issues early on, individuals can potentially avoid hospitalizations, surgeries,
+                    and other
+                    expensive treatments.</p>
+            </div>
+        </div>
+        <div class="make_box">
+            <div class="make_box_1">
+                <h2 style="text-align: center;">Peace of Mind</h2>
+                <p>Regularly checking health symptoms can provide reassurance and peace of mind, especially for those
+                    prone to
+                    health anxiety or individuals with a family history of certain conditions. Knowing that one is
+                    actively
+                    monitoring their health can alleviate worries and promote overall well-being.</p>
+            </div>
+            <div class="make_box_2">
+                <img src="images/peaceofmind.avif" alt="early checkup">
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <i class="fa fa-envelope" style="font-size:36px"></i>
+            <i class="fa fa-twitter" style="font-size:36px"></i>
+            <i class="fa fa-youtube-play" style="font-size:36px"></i>
+        </div>
+        <div class="developer-info">
+            <p>Site developed by: I,me&Myselflimited</p>
+            <p>Contact: Imemyself@egmail.com</p>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2024 Imeandmyself. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

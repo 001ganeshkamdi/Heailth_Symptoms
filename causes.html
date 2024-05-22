@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symptom Checker</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="design.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+  <style>
+    body {
+      background-color: #4C4CAF;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%236767b4' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%238282b9' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%239b9bc0' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23b3b3c9' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23c8c8d3' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23dcdce0' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23EEE' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+      background-attachment: fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    :root {
+      --primary-color: #007bff; /* Default blue color */
+      --secondary-color: #261818; /* Default dark gray color */
+      --background-light: #6c6cf498; /* Default light blue background */
+      --box-shadow-color: rgba(39, 42, 192, 0.942); /* Default box shadow color */
+    }
+
+    body.dark {
+      background-color: #000000;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23222222' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23444444' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23666666' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23888888' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23aaaaaa' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23cccccc' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23EEE' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+      background-attachment: fixed;
+      background-size: cover;
+      --primary-color: #BB86FC; /* Adjust primary color for dark mode */
+      --secondary-color: #998c8c; /* Adjust secondary color for dark mode */
+      --background-light: #2c272e; /* Adjust background color for dark mode */
+      --box-shadow-color: rgba(215, 207, 226, 0.971); /* Adjust box shadow color for dark mode */
+    }
+
+    .container-fluid {
+      background-color: #4c4cafa9; /* Semi-transparent background color */
+      padding: 20px;
+      max-width: 70%;
+      border-radius: 10px; /* Rounded corners */
+    }
+
+    h1 {
+      text-align: center;
+      color: #fff; /* White text color */
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #fff; /* White text color */
+    }
+
+    input[type="text"] {
+      border-radius: 5px;
+      width: 85%;
+      padding: 10px;
+      font-size: 16px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    input[type="text"]:focus {
+      border-color: #7300ff;
+      box-shadow: 0 0 10px rgba(115, 0, 255, 0.5);
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #7300ff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    #result {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #f4eded;
+      border-radius: 5px;
+      animation: fadeIn 0.5s ease-in-out;
+      background-color: #ffffff; /* White background color for results */
+    }
+
+    #symptom-table {
+        background-color: white;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#symptom-table th, #symptom-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#symptom-table th {
+  background-color: #f2f2f2;
+}
+
+#symptom-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+ 
+  </style>
+</head>
+<body>
+    <script src="home.js" defer></script>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen'></i>
+            <span class="logo navLogo"><a href="#">Health Symptoms</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Health Symptoms</a></span>
+                    <i class='bx bx-x sidebarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="Diseases and Conditions.html">Diseases and Conditions</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+            </div>
+        </div>
+  <h1>Symptoms causes and treatments</h1>
+  <div id="symptom-checker">
+    <label for="symptom">Select a disease OR Disorder:</label>
+    <select id="symptom">
+      <option value="" disabled selected>Select a symptom</option>
+      <option value="Abdominal Aortic Aneurysm (AAA)">Abdominal Aortic Aneurysm (AAA)</option>
+      <option value="Abnormal Uterine Bleeding">Abnormal Uterine Bleeding</option>
+      <option value="ACL Injury">ACL Injury</option>
+      <option value="Acne">Acne</option>
+      <option value="Acute Bronchitis">Acute Bronchitis</option>
+      <option value="Addison’s Disease">Addison’s Disease</option>
+      <option value="ADHD in Children: Symptoms, Diagnosis, and Support">ADHD in Children: Symptoms, Diagnosis, and Support</option>
+      <option value="Adhesive Capsulitis (Frozen Shoulder)">Adhesive Capsulitis (Frozen Shoulder)</option>
+      <option value="Adult ADHD">Adult ADHD</option>
+      <option value="AIDS">AIDS</option>
+      <option value="Alcohol Abuse">Alcohol Abuse</option>
+      <option value="Allergic Conjunctivitis">Allergic Conjunctivitis</option>
+      <option value="Allergic Rhinitis (Allergies)">Allergic Rhinitis (Allergies)</option>
+      <option value="Alopecia Areata (AA)">Alopecia Areata (AA)</option>
+      <option value="Alzheimer's Disease">Alzheimer's Disease</option>
+      <option value="Amblyopia">Amblyopia</option>
+      <option value="Amenorrhea">Amenorrhea</option>
+      <option value="Anal Fissure">Anal Fissure</option>
+      <option value="Anal Fistulas">Anal Fistulas</option>
+      <option value="Anaphylaxis">Anaphylaxis</option>
+      <option value="Anemia">Anemia</option>
+      <option value="Angina">Angina</option>
+      <option value="Ankle Sprains">Ankle Sprains</option>
+      <option value="Appendicitis">Appendicitis</option>
+      <option value="Arrhythmia">Arrhythmia</option>
+      <option value="Arrhythmogenic Right Ventricular Cardiomyopathy (ARVC)">Arrhythmogenic Right Ventricular Cardiomyopathy (ARVC)</option>
+      <option value="Asperger's Syndrome">Asperger's Syndrome</option>
+      <option value="Asthma">Asthma</option>
+      <option value="Asthma in Kids">Asthma in Kids</option>
+      <option value="Atherosclerosis">Atherosclerosis</option>
+      <option value="Attention-Deficit Hyperactivity Disorder (ADHD)">Attention-Deficit Hyperactivity Disorder (ADHD)</option>
+      <option value="Autism">Autism</option>
+      <option value="Avian Flu">Avian Flu</option>
+      <option value="Babesiosis">Babesiosis</option>
+      <option value="Bacterial Endocarditis">Bacterial Endocarditis</option>
+      <option value="Bacterial Vaginosis (BV)">Bacterial Vaginosis (BV)</option>
+      <option value="Barrett’s Esophagus">Barrett’s Esophagus</option>
+      <option value="Bartholin's Gland Cyst">Bartholin's Gland Cyst</option>
+      <option value="Bedbugs">Bedbugs</option>
+      <option value="Bell’s Palsy">Bell’s Palsy</option>
+      <option value="Benign Breast Conditions">Benign Breast Conditions</option>
+      <option value="Benign Paroxysmal Positional Vertigo (BPPV)">Benign Paroxysmal Positional Vertigo (BPPV)</option>
+      <option value="Benign Prostatic Hyperplasia (BPH)">Benign Prostatic Hyperplasia (BPH)</option>
+      <option value="Bipolar Disorder">Bipolar Disorder</option>
+      <option value="Bladder Stones">Bladder Stones</option>
+      <option value="Blepharospasm">Blepharospasm</option>
+      <option value="Bloating">Bloating</option>
+      <option value="Blood Clots">Blood Clots</option>
+      <option value="Blood Poisoning">Blood Poisoning</option>
+      <option value="Bone Cancer">Bone Cancer</option>
+      <option value="Breast Cancer">Breast Cancer</option>
+      <option value="Breast Pain in Women">Breast Pain in Women</option>
+      <option value="Bronchiolitis">Bronchiolitis</option>
+      <option value="Burners">Burners</option>
+      <option value="Burning Mouth Syndrome">Burning Mouth Syndrome</option>
+      <option value="Bursitis of the Hip">Bursitis of the Hip</option>
+      <option value="C. diff (Clostridium difficile) Infection">C. diff (Clostridium difficile) Infection</option>
+      <option value="Cancer">Cancer</option>
+      <option value="Canker Sores">Canker Sores</option>
+      <option value="Cardiomyopathy">Cardiomyopathy</option>
+      <option value="Carpal Tunnel Syndrome">Carpal Tunnel Syndrome</option>
+      <option value="Cat-Scratch Disease (Cat-Scratch Fever)">Cat-Scratch Disease (Cat-Scratch Fever)</option>
+      <option value="Celiac Disease">Celiac Disease</option>
+      <option value="Cellulitis">Cellulitis</option>
+      <option value="Central Precocious Puberty">Central Precocious Puberty</option>
+      <option value="Cerebral Palsy">Cerebral Palsy</option>
+      <option value="Cervical Cancer">Cervical Cancer</option>
+      <option value="Cervical Dysplasia">Cervical Dysplasia</option>
+      <option value="Cervical Dystonia">Cervical Dystonia</option>
+      <option value="Cervical Spondylotic Myelopathy (CSM)">Cervical Spondylotic Myelopathy (CSM)</option>
+      <option value="Chickenpox">Chickenpox</option>
+      <option value="Chlamydia">Chlamydia</option>
+      <option value="Chronic Bronchitis">Chronic Bronchitis</option>
+      <option value="Chronic Cough">Chronic Cough</option>
+      <option value="Chronic Fatigue Syndrome">Chronic Fatigue Syndrome</option>
+      <option value="Chronic Kidney Disease (CKD)">Chronic Kidney Disease (CKD)</option>
+      <option value="Chronic Obstructive Pulmonary Disease (COPD)">Chronic Obstructive Pulmonary Disease (COPD)</option>
+      <option value="Chronic Pain">Chronic Pain</option>
+      <option value="Chronic Pelvic Pain">Chronic Pelvic Pain</option>
+      <option value="Cirrhosis and Portal Hypertension">Cirrhosis and Portal Hypertension</option>
+      <option value="Cleft Lip and Cleft Palate">Cleft Lip and Cleft Palate</option>
+      <option value="Club Drug Use">Club Drug Use</option>
+      <option value="Clubfoot">Clubfoot</option>
+      <option value="Colds and the Flu">Colds and the Flu</option>
+      <option value="Colic">Colic</option>
+      <option value="Colorectal Cancer">Colorectal Cancer</option>
+      <option value="Complex Regional Pain Syndrome">Complex Regional Pain Syndrome</option>
+      <option value="Concussion">Concussion</option>
+      <option value="Congenital Adrenal Hyperplasia">Congenital Adrenal Hyperplasia</option>
+<option value="Congenital Heart Disease">Congenital Heart Disease</option>
+<option value="Constipation">Constipation</option>
+<option value="Corneal Abrasions">Corneal Abrasions</option>
+<option value="Coronary Artery Disease (CAD)">Coronary Artery Disease (CAD)</option>
+<option value="Coronavirus (COVID-19)">Coronavirus (COVID-19)</option>
+<option value="Coronavirus Disease 2019 (COVID-19)">Coronavirus Disease 2019 (COVID-19)</option>
+<option value="Crohn’s Disease">Crohn’s Disease</option>
+<option value="Croup">Croup</option>
+<option value="Cushing's Syndrome">Cushing's Syndrome</option>
+<option value="Cystic Fibrosis (CF)">Cystic Fibrosis (CF)</option>
+<option value="Cytomegalovirus">Cytomegalovirus</option>
+<option value="De Quervain’s Tenosynovitis">De Quervain’s Tenosynovitis</option>
+<option value="Deep Vein Thrombosis">Deep Vein Thrombosis</option>
+<option value="Dementia">Dementia</option>
+<option value="Depression">Depression</option>
+<option value="Diabetes">Diabetes</option>
+<option value="Diabetes in Kids - Signs and Causes">Diabetes in Kids - Signs and Causes</option>
+<option value="Diabetes Insipidus">Diabetes Insipidus</option>
+<option value="Diabetic Ketoacidosis">Diabetic Ketoacidosis</option>
+<option value="Diabetic Nephropathy">Diabetic Nephropathy</option>
+<option value="Diabetic Neuropathy">Diabetic Neuropathy</option>
+<option value="Diabetic Retinopathy">Diabetic Retinopathy</option>
+<option value="Diaper Rash">Diaper Rash</option>
+<option value="Diverticular Disease (Diverticulitis)">Diverticular Disease (Diverticulitis)</option>
+<option value="Bipolar Disorder">Bipolar Disorder</option>
+<option value="Down Syndrome">Down Syndrome</option>
+<option value="Dysmenorrhea">Dysmenorrhea</option>
+<option value="Dysphagia">Dysphagia</option>
+<option value="E. coli Infection">E. coli Infection</option>
+<option value="Ear Infection">Ear Infection</option>
+<option value="Early Pregnancy Loss">Early Pregnancy Loss</option>
+<option value="Eating Disorders">Eating Disorders</option>
+<option value="Ebola Virus Disease">Ebola Virus Disease</option>
+<option value="Echinococcosis">Echinococcosis</option>
+<option value="Ectopic Pregnancy">Ectopic Pregnancy</option>
+<option value="Eczema and Atopic Dermatitis">Eczema and Atopic Dermatitis</option>
+<option value="Edema">Edema</option>
+<option value="Endometrial Cancer">Endometrial Cancer</option>
+<option value="Endometrial Hyperplasia">Endometrial Hyperplasia</option>
+<option value="Endometriosis">Endometriosis</option>
+<option value="Enlarged Adenoids">Enlarged Adenoids</option>
+<option value="Epilepsy">Epilepsy</option>
+<option value="Eosinophilic Esophagitis">Eosinophilic Esophagitis</option>
+<option value="Erectile Dysfunction (ED)">Erectile Dysfunction (ED)</option>
+<option value="Esophageal Atresia and Tracheoesophageal Fistula">Esophageal Atresia and Tracheoesophageal Fistula</option>
+<option value="Essential Tremor">Essential Tremor</option>
+<option value="Eustachian Tube Dysfunction">Eustachian Tube Dysfunction</option>
+<option value="Exercise-induced Bronchospasm">Exercise-induced Bronchospasm</option>
+<option value="Exercise-induced Urticaria">Exercise-induced Urticaria</option>
+<option value="Fainting">Fainting</option>
+<option value="Febrile Seizures">Febrile Seizures</option>
+<option value="Fecal Incontinence">Fecal Incontinence</option>
+<option value="Female Athlete Triad">Female Athlete Triad</option>
+<option value="Fetal Alcohol Syndrome">Fetal Alcohol Syndrome</option>
+<option value="Fetal Growth Restriction">Fetal Growth Restriction</option>
+<option value="Fever in Infants and Children">Fever in Infants and Children</option>
+<option value="Fibromyalgia">Fibromyalgia</option>
+<option value="Fifth Disease">Fifth Disease</option>
+<option value="Flat Feet">Flat Feet</option>
+<option value="Flatulence/Gas">Flatulence/Gas</option>
+<option value="Food Allergies">Food Allergies</option>
+<option value="Food Poisoning">Food Poisoning</option>
+<option value="Food Poisoning | Mushroom Poisoning">Food Poisoning | Mushroom Poisoning</option>
+<option value="Fragile X Syndrome">Fragile X Syndrome</option>
+<option value="Galactorrhea">Galactorrhea</option>
+<option value="Gallstones">Gallstones</option>
+<option value="Gastroparesis">Gastroparesis</option>
+<option value="Generalized Anxiety Disorder">Generalized Anxiety Disorder</option>
+<option value="Genital Warts">Genital Warts</option>
+
+<option value="Gestational Diabetes">Gestational Diabetes</option>
+<option value="Heart Murmurs">Heart Murmurs</option>
+<option value="Heart Palpitations">Heart Palpitations</option>
+<option value="Heartburn">Heartburn</option>
+<option value="Heat Exhaustion and Heat Stroke">Heat Exhaustion and Heat Stroke</option>
+<option value="Heat Rash">Heat Rash</option>
+<option value="HELLP Syndrome">HELLP Syndrome</option>
+<option value="Hemolytic Uremic Syndrome">Hemolytic Uremic Syndrome</option>
+<option value="Hemorrhoids">Hemorrhoids</option>
+<option value="Henoch-Schönlein Purpura">Henoch-Schönlein Purpura</option>
+<option value="Hepatitis A">Hepatitis A</option>
+<option value="Hepatitis B">Hepatitis B</option>
+<option value="Hepatitis C">Hepatitis C</option>
+<option value="Hereditary Hemochromatosis">Hereditary Hemochromatosis</option>
+<option value="Hernia">Hernia</option>
+<option value="Herniated Disc">Herniated Disc</option>
+<option value="Herpes">Herpes</option>
+<option value="Hidradenitis Suppurativa">Hidradenitis Suppurativa</option>
+<option value="High Blood Pressure">High Blood Pressure</option>
+<option value="High Blood Pressure During Pregnancy">High Blood Pressure During Pregnancy</option>
+<option value="High Cholesterol">High Cholesterol</option>
+<option value="High-Altitude Illness">High-Altitude Illness</option>
+<option value="Hip Fractures">Hip Fractures</option>
+<option value="Hip Problems in Infants">Hip Problems in Infants</option>
+<option value="Hirschsprung’s Disease">Hirschsprung’s Disease</option>
+<option value="Hirsutism">Hirsutism</option>
+<option value="HIV">HIV</option>
+<option value="Hives (Urticaria)">Hives (Urticaria)</option>
+<option value="Human Papillomavirus (HPV)">Human Papillomavirus (HPV)</option>
+<option value="Huntington's Disease">Huntington's Disease</option>
+<option value="Hypercoagulation">Hypercoagulation</option>
+<option value="Hyperhidrosis">Hyperhidrosis</option>
+<option value="Hyperparathyroidism">Hyperparathyroidism</option>
+<option value="Hyperthyroidism">Hyperthyroidism</option>
+<option value="Hypopituitarism">Hypopituitarism</option>
+<option value="Hypothermia">Hypothermia</option>
+<option value="Hypothyroidism">Hypothyroidism</option>
+<option value="Idiopathic Thrombocytopenic Purpura (ITP)">Idiopathic Thrombocytopenic Purpura (ITP)</option>
+<option value="Indigestion (Dyspepsia)">Indigestion (Dyspepsia)</option>
+<option value="Infant Jaundice">Infant Jaundice</option>
+<option value="Infertility">Infertility</option>
+<option value="Inflammatory Bowel Disease (IBD)">Inflammatory Bowel Disease (IBD)</option>
+<option value="Ingrown Toenails">Ingrown Toenails</option>
+<option value="Inhalant Use">Inhalant Use</option>
+<option value="Insect-borne Diseases">Insect-borne Diseases</option>
+<option value="Insomnia">Insomnia</option>
+<option value="Insulin Resistance">Insulin Resistance</option>
+<option value="Interstitial Cystitis">Interstitial Cystitis</option>
+<option value="Interstitial Nephritis">Interstitial Nephritis</option>
+<option value="Intertrigo">Intertrigo</option>
+<option value="Intoeing">Intoeing</option>
+<option value="Intussusception">Intussusception</option>
+<option value="Irritable Bowel Syndrome (IBS)">Irritable Bowel Syndrome (IBS)</option>
+<option value="Jock Itch">Jock Itch</option>
+<option value="Juvenile Rheumatoid Arthritis">Juvenile Rheumatoid Arthritis</option>
+<option value="Keloids (Raised Scars)">Keloids (Raised Scars)</option>
+<option value="Keratosis Pilaris">Keratosis Pilaris</option>
+<option value="Kidney Cysts">Kidney Cysts</option>
+<option value="Kidney Infection Symptoms and Treatment">Kidney Infection Symptoms and Treatment</option>
+<option value="Kidney Stones">Kidney Stones</option>
+<option value="Labyrinthitis">Labyrinthitis</option>
+<option value="Lactose Intolerance">Lactose Intolerance</option>
+<option value="Latex Allergy">Latex Allergy</option>
+<option value="Leprosy">Leprosy</option>
+<option value="Leukemia">Leukemia</option>
+<option value="Lichen Planus">Lichen Planus</option>
+<option value="Lichen Sclerosus">Lichen Sclerosus</option>
+<option value="Lipomas">Lipomas</option>
+<option value="Long COVID">Long COVID</option>
+<option value="Low Back Pain">Low Back Pain</option>
+<option value="Lumbar Spinal Canal Stenosis">Lumbar Spinal Canal Stenosis</option>
+<option value="Lung Cancer">Lung Cancer</option>
+<option value="Lupus">Lupus</option>
+<option value="Lyme Disease">Lyme Disease</option>
+<option value="Lymphedema">Lymphedema</option>
+<option value="Mad Cow Disease">Mad Cow Disease</option>
+<option value="Malaria">Malaria</option>
+
+<option value="Male Breast Cancer">Male Breast Cancer</option>
+<option value="Mallet Finger">Mallet Finger</option>
+<option value="Mass Psychogenic Illness">Mass Psychogenic Illness</option>
+<option value="Mastitis">Mastitis</option>
+<option value="Mastocytosis">Mastocytosis</option>
+<option value="Measles">Measles</option>
+<option value="Meckel's Diverticulum">Meckel's Diverticulum</option>
+<option value="Meconium Aspiration Syndrome (MAS)">Meconium Aspiration Syndrome (MAS)</option>
+<option value="Melasma">Melasma</option>
+<option value="Meniere’s Disease">Meniere’s Disease</option>
+<option value="Meningitis">Meningitis</option>
+<option value="Menopause">Menopause</option>
+<option value="Metabolic Syndrome">Metabolic Syndrome</option>
+<option value="Methicillin-resistant Staphylococcus aureus (MRSA)">Methicillin-resistant Staphylococcus aureus (MRSA)</option>
+<option value="Microscopic Hematuria">Microscopic Hematuria</option>
+<option value="Migraines">Migraines</option>
+<option value="Mitral Valve Prolapse">Mitral Valve Prolapse</option>
+<option value="Mononucleosis">Mononucleosis</option>
+<option value="Morning Sickness">Morning Sickness</option>
+<option value="Motion Sickness">Motion Sickness</option>
+<option value="Mpox (Monkeypox)">Mpox (Monkeypox)</option>
+<option value="Multiple Myeloma">Multiple Myeloma</option>
+<option value="Multiple Sclerosis">Multiple Sclerosis</option>
+<option value="Mumps">Mumps</option>
+<option value="Munchausen Syndrome by Proxy">Munchausen Syndrome by Proxy</option>
+<option value="Muscular Dystrophy">Muscular Dystrophy</option>
+<option value="Nail Fungal Infections">Nail Fungal Infections</option>
+<option value="Nasopharyngeal Cancer">Nasopharyngeal Cancer</option>
+<option value="Necrotizing Enterocolitis">Necrotizing Enterocolitis</option>
+<option value="Neonatal Abstinence Syndrome">Neonatal Abstinence Syndrome</option>
+<option value="Neural Tube Defects">Neural Tube Defects</option>
+<option value="Neurofibromatosis">Neurofibromatosis</option>
+<option value="Nightmares and Night Terrors">Nightmares and Night Terrors</option>
+<option value="Non-Hodgkin Lymphoma">Non-Hodgkin Lymphoma</option>
+<option value="Non-substance Addiction">Non-substance Addiction</option>
+<option value="Nonalcoholic Fatty Liver Disease (Metabolic dysfunction-associated steatotic liver disease)">Nonalcoholic Fatty Liver Disease (Metabolic dysfunction-associated steatotic liver disease)</option>
+<option value="Nosebleeds">Nosebleeds</option>
+<option value="Obesity">Obesity</option>
+<option value="Obsessive-Compulsive Disorder">Obsessive-Compulsive Disorder</option>
+<option value="Occupational Respiratory Disease">Occupational Respiratory Disease</option>
+<option value="Opioid Addiction">Opioid Addiction</option>
+<option value="Oppositional Defiant Disorder">Oppositional Defiant Disorder</option>
+<option value="Organic Acid Metabolism Disorders">Organic Acid Metabolism Disorders</option>
+<option value="Osgood-Schlatter Disease">Osgood-Schlatter Disease</option>
+<option value="Osteoarthritis">Osteoarthritis</option>
+<option value="Osteochondritis Dissecans">Osteochondritis Dissecans</option>
+<option value="Osteopenia">Osteopenia</option>
+<option value="Osteoporosis">Osteoporosis</option>
+<option value="Osteosarcoma">Osteosarcoma</option>
+<option value="Otitis Externa (Swimmer's Ear)">Otitis Externa (Swimmer's Ear)</option>
+<option value="Otitis Media (with Effusion)">Otitis Media (with Effusion)</option>
+<option value="Ovarian Cancer">Ovarian Cancer</option>
+<option value="Ovarian Cyst">Ovarian Cyst</option>
+<option value="Overactive Bladder">Overactive Bladder</option>
+<option value="Pancreatic Cancer">Pancreatic Cancer</option>
+<option value="Pancreatitis">Pancreatitis</option>
+<option value="Panic Disorder and Panic Attacks">Panic Disorder and Panic Attacks</option>
+<option value="Paraphimosis">Paraphimosis</option>
+<option value="Parkinson’s Disease">Parkinson’s Disease</option>
+<option value="Paronychia">Paronychia</option>
+<option value="Patellofemoral Pain Syndrome">Patellofemoral Pain Syndrome</option>
+<option value="Pelvic Floor Disorders">Pelvic Floor Disorders</option>
+<option value="Pelvic Inflammatory Disease">Pelvic Inflammatory Disease</option>
+<option value="Peptic Ulcer Disease">Peptic Ulcer Disease</option>
+<option value="Perimenopause">Perimenopause</option>
+<option value="Peripheral Arterial Disease and Claudication">Peripheral Arterial Disease and Claudication</option>
+<option value="Peritonsillar Abscess">Peritonsillar Abscess</option>
+<option value="Persistent Depressive Disorder (PDD)">Persistent Depressive Disorder (PDD)</option>
+<option value="Peyronie’s Disease">Peyronie’s Disease</option>
+<option value="Phenylketonuria (PKU)">Phenylketonuria (PKU)</option>
+<option value="Pica">Pica</option>
+<option value="Pigmented Villonodular Synovitis">Pigmented Villonodular Synovitis</option>
+<option value="Pilonidal Cyst">Pilonidal Cyst</option>
+<option value="Pinworm Infection">Pinworm Infection</option>
+<option value="Piriformis Syndrome">Piriformis Syndrome</option>
+<option value="Pituitary Tumors">Pituitary Tumors</option>
+<option value="Pityriasis Rosea">Pityriasis Rosea</option>
+<option value="Plagiocephaly">Plagiocephaly</option>
+<option value="Plantar Fasciitis">Plantar Fasciitis</option>
+<option value="Pleurisy (Pleuritis)">Pleurisy (Pleuritis)</option>
+<option value="Pneumonia and Walking Pneumonia">Pneumonia and Walking Pneumonia</option>
+<option value="Poison Ivy">Poison Ivy</option>
+<option value="Poisoning">Poisoning</option>
+<option value="Polycystic Kidney Disease">Polycystic Kidney Disease</option>
+<option value="Polycystic Ovary Syndrome">Polycystic Ovary Syndrome</option>
+<option value="Polycythemia Vera">Polycythemia Vera</option>
+<option value="Polyps">Polyps</option>
+<option value="Post-Traumatic Stress Disorder (PTSD)">Post-Traumatic Stress Disorder (PTSD)</option>
+<option value="Postpartum Depression (PPD)">Postpartum Depression (PPD)</option>
+<option value="Postpartum Preeclampsia">Postpartum Preeclampsia</option>
+<option value="Prediabetes">Prediabetes</option>
+<option value="Preeclampsia">Preeclampsia</option>
+<option value="Premature Ejaculation">Premature Ejaculation</option>
+<option value="Premenstrual Dysphoric Disorder">Premenstrual Dysphoric Disorder</option>
+<option value="Premenstrual Syndrome (PMS)">Premenstrual Syndrome (PMS)</option>
+<option value="Prescription Drug Abuse in the Elderly">Prescription Drug Abuse in the Elderly</option>
+<option value="Pressure Sores">Pressure Sores</option>
+<option value="Prostate Cancer">Prostate Cancer</option>
+<option value="Prostatitis">Prostatitis</option>
+<option value="Pruritus (Itchy Skin)">Pruritus (Itchy Skin)</option>
+<option value="Pseudogout">Pseudogout</option>
+<option value="Psoriasis">Psoriasis</option>
+<option value="Pulmonary Hypertension">Pulmonary Hypertension</option>
+<option value="Pyloric Stenosis">Pyloric Stenosis</option>
+<option value="Raynaud's Disease">Raynaud's Disease</option>
+<option value="Reactive Arthritis">Reactive Arthritis</option>
+<option value="Recurrent Pregnancy Loss">Recurrent Pregnancy Loss</option>
+<option value="Reflux/Acid Reflux (GERD)">Reflux/Acid Reflux (GERD)</option>
+<option value="Repeated Infections in Children">Repeated Infections in Children</option>
+<option value="Restless Leg Syndrome">Restless Leg Syndrome</option>
+<option value="Reye’s Syndrome">Reye’s Syndrome</option>
+<option value="Rheumatic Fever">Rheumatic Fever</option>
+<option value="Rheumatoid Arthritis">Rheumatoid Arthritis</option>
+<option value="Rickets">Rickets</option>
+<option value="Ringworm">Ringworm</option>
+<option value="Rosacea">Rosacea</option>
+<option value="Rotavirus">Rotavirus</option>
+<option value="RSV (Respiratory Syncytial Virus)">RSV (Respiratory Syncytial Virus)</option>
+<option value="RSV in Adults Over 60">RSV in Adults Over 60</option>
+<option value="Sarcoidosis">Sarcoidosis</option>
+<option value="Scarlet Fever">Scarlet Fever</option>
+<option value="Schizophrenia">Schizophrenia</option>
+<option value="Scleroderma">Scleroderma</option>
+<option value="Scoliosis">Scoliosis</option>
+<option value="Seasonal Affective Disorder">Seasonal Affective Disorder</option>
+<option value="Seborrheic Dermatitis">Seborrheic Dermatitis</option>
+<option value="Sensory Processing Disorder (SPD)">Sensory Processing Disorder (SPD)</option>
+<option value="Sever's Disease">Sever's Disease</option>
+<option value="Sexual Dysfunction in Men and Women">Sexual Dysfunction in Men and Women</option>
+<option value="Sexually Transmitted Infections (STIs)">Sexually Transmitted Infections (STIs)</option>
+<option value="Shaken Baby Syndrome (Abusive Head Trauma)">Shaken Baby Syndrome (Abusive Head Trauma)</option>
+<option value="Shin Splints">Shin Splints</option>
+<option value="Shingles">Shingles</option>
+<option value="Shortness of Breath">Shortness of Breath</option>
+<option value="Shoulder Instability">Shoulder Instability</option>
+<option value="Sick Sinus Syndrome">Sick Sinus Syndrome</option>
+<option value="Sickle Cell Disease">Sickle Cell Disease</option>
+<option value="Silent Heart Attacks">Silent Heart Attacks</option>
+<option value="Sinus Infection (Sinusitis)">Sinus Infection (Sinusitis)</option>
+<option value="Sjögren’s Syndrome">Sjögren’s Syndrome</option>
+<option value="Skin Cancer">Skin Cancer</option>
+<option value="Skin tags">Skin tags</option>
+<option value="Sleep Apnea">Sleep Apnea</option>
+<option value="Sleepwalking">Sleepwalking</option>
+<option value="Slipped Capital Femoral Epiphysis">Slipped Capital Femoral Epiphysis</option>
+<option value="Small Vessel Disease">Small Vessel Disease</option>
+<option value="Social Phobia">Social Phobia</option>
+<option value="Somatic Symptom Disorder">Somatic Symptom Disorder</option>
+<option value="Sore Throat">Sore Throat</option>
+<option value="Speech and Language Delay">Speech and Language Delay</option>
+<option value="Spina Bifida">Spina Bifida</option>
+<option value="Spinal Cord Injury">Spinal Cord Injury</option>
+<option value="Squamous Cell Carcinoma">Squamous Cell Carcinoma</option>
+<option value="Stomach Cancer">Stomach Cancer</option>
+<option value="Stomach Flu (Gastroenteritis)">Stomach Flu (Gastroenteritis)</option>
+<option value="Strabismus">Strabismus</option>
+<option value="Strep Throat">Strep Throat</option>
+<option value="Stroke">Stroke</option>
+<option value="Stuttering">Stuttering</option>
+<option value="Sty">Sty</option>
+<option value="Substance Use Disorder">Substance Use Disorder</option>
+<option value="Sudden Infant Death Syndrome (SIDS)">Sudden Infant Death Syndrome (SIDS)</option>
+<option value="Syphilis">Syphilis</option>
+<option value="Teeth Grinding (Bruxism)">Teeth Grinding (Bruxism)</option>
+<option value="Tennis Elbow">Tennis Elbow</option>
+<option value="Testicular Cancer">Testicular Cancer</option>
+<option value="Testicular Torsion">Testicular Torsion</option>
+<option value="Thalassemia">Thalassemia</option>
+<option value="Thrush">Thrush</option>
+<option value="Thyroid Nodules">Thyroid Nodules</option>
+<option value="Thyroiditis">Thyroiditis</option>
+<option value="Tick-Borne Relapsing Fever">Tick-Borne Relapsing Fever</option>
+<option value="Tinnitus">Tinnitus</option>
+<option value="Tobacco Addiction">Tobacco Addiction</option>
+<option value="Tonsillitis">Tonsillitis</option>
+<option value="Tourette Syndrome and Tics">Tourette Syndrome and Tics</option>
+<option value="Toxic Shock Syndrome">Toxic Shock Syndrome</option>
+<option value="Toxic Synovitis, or Transient Synovitis of the Hip">Toxic Synovitis, or Transient Synovitis of the Hip</option>
+<option value="Toxoplasmosis">Toxoplasmosis</option>
+<option value="Traumatic Brain Injury">Traumatic Brain Injury</option>
+<option value="Traveler’s Diarrhea">Traveler’s Diarrhea</option>
+<option value="Trigeminal Neuralgia">Trigeminal Neuralgia</option>
+<option value="Tuberculosis">Tuberculosis</option>
+<option value="Tuberous Sclerosis">Tuberous Sclerosis</option>
+<option value="Ulcers - Stomach Ulcer Symptoms">Ulcers - Stomach Ulcer Symptoms</option>
+<option value="Undescended Testicles">Undescended Testicles</option>
+<option value="Urinary Incontinence">Urinary Incontinence</option>
+<option value="Uterine Fibroids">Uterine Fibroids</option>
+<option value="Urinary Tract Infection">Urinary Tract Infection</option>
+<option value="Vaginal Discharge">Vaginal Discharge</option>
+<option value="Vaginitis">Vaginitis</option>
+<option value="Varicose Veins">Varicose Veins</option>
+<option value="Vibrio Vulnificus Infection">Vibrio Vulnificus Infection</option>
+<option value="Vision Loss">Vision Loss</option>
+<option value="Vitiligo">Vitiligo</option>
+<option value="Vomiting and Diarrhea">Vomiting and Diarrhea</option>
+<option value="Vulvar Cancer">Vulvar Cancer</option>
+<option value="Vulvodynia">Vulvodynia</option>
+<option value="Warts and Wart Removal">Warts and Wart Removal</option>
+<option value="West Nile Virus">West Nile Virus</option>
+<option value="Whooping Cough">Whooping Cough</option>
+<option value="Wolff-Parkinson-White Syndrome">Wolff-Parkinson-White Syndrome</option>
+<option value="Yeast Infections">Yeast Infections</option>
+<option value="Zika">Zika</option>
+</select>
+
+   
+
+  </div>
+  <table id="symptom-table">
+    <thead>
+      <tr>
+       
+        <th>Possible Causes</th>
+        <th>Recommended Treatments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Symptoms data will be populated here dynamically -->
+    </tbody>
+  </table>
+  <script>
+    // Function to display information based on selected symptom
+   
+    function displayInfo(symptom) {
+      const resultDiv = document.getElementById('result');
+      const tableBody = document.querySelector('#symptom-table tbody');
+      tableBody.innerHTML = ''; // Clear previous table content
+      
+      if (symptom === '') {
+        resultDiv.innerHTML = 'Please select a symptom';
+        return;
+      }
+
+      fetch('data2.json')
+        .then(response => response.json())
+        .then(data => {
+          const info = data[symptom];
+          if (info) {
+            const causes = info.possible_causes.join(', ');
+            const treatments = info.recommended_treatments.join(', ');
+
+            // Populate the table with symptom information
+            const row = `<tr>
+                          
+                          <td>${causes}</td>
+                          <td>${treatments}</td>
+                        </tr>`;
+            tableBody.innerHTML = row;
+
+            // Display symptom information in the result div as well
+            const html = `<p><strong>Possible Causes:</strong> ${causes}</p>
+                          <p><strong>Recommended Treatments:</strong> ${treatments}</p>`;
+            resultDiv.innerHTML = html;
+          } else {
+            resultDiv.innerHTML = 'Information not available for this symptom';
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+          resultDiv.innerHTML = 'Error fetching data. Please try again later.';
+        });
+    }
+
+    // Event listener for select element
+    document.getElementById('symptom').addEventListener('change', function() {
+      const selectedSymptom = this.value;
+      displayInfo(selectedSymptom);
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

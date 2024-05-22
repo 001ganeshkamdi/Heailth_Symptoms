@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Symptoms</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="showprofile.css">
+
+</head>
+
+<body>
+    <script src="home.js" defer></script>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen'></i>
+            <span class="logo navLogo"><a href="#">Health Symptoms</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Health Symptoms</a></span>
+                    <i class='bx bx-x sidebarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="Diseases and Conditions.html">Diseases and Conditions</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+            </div>
+            <div class="make">
+                <div class="">
+                    <button type='button' onclick="popup('profile-popup')">Profile</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="popup-container" id="profile-popup">
+        <div class="login popup">
+            <form method="POST" action="">
+                <h2>
+                    <span>PROFILE</span>
+                    <button type="reset" onclick="popup('profile-popup')">X</button>
+                </h2>
+                <div class="containers">
+                    <img src="" alt="Profile Picture" class="profile-image" id="profileImage">
+                    <div class="profile-info">
+                        <p><strong>Name:</strong> <span id="profileName"></span></p>
+                        <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+                        <p><strong>Occupation:</strong> <span id="profileOccupation"></span></p>
+                        <p><strong>Age:</strong> <span id="profileAge"></span></p>
+                        <p><strong>Gender:</strong> <span id="profileGender"></span></p>
+                    </div>
+                    <div class="action-btns">
+                        <button type="button" onclick="window.location.href='index.php'">Edit</button>
+                        <a href="logout.php">Logout</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+<script src="showprofile.js"></script>
+
+        <div class="contact">
+            <form id="contact-form" method="POST">
+                <h2>Contact Us</h2>
+                <div class="input-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+            <div id="status"></div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#contact-form').on('submit', function (event) {
+                    event.preventDefault();
+
+                    var formData = {
+                        name: $('#name').val(),
+                        email: $('#email').val(),
+                        message: $('#message').val()
+                    };
+
+                    $.ajax({
+                        type: 'POST',
+                        url: 'submit_form.php',
+                        data: formData,
+                        success: function (response) {
+                            alert(response);
+                            if (response === "Message sent successfully.") {
+                                $('#contact-form')[0].reset();
+                                $('#status').html(response).css('color', 'green');
+                            }
+                        },
+                        error: function (xhr) {
+                            var statusElement = $('#status');
+                            if (xhr.status === 400) {
+                                statusElement.html('Invalid email address or missing fields. Please check your input.').css('color', 'red');
+                            } else if (xhr.status === 403) {
+                                statusElement.html('There was a problem with your submission. Please try again.').css('color', 'red');
+                            } else {
+                                statusElement.html('Message sent successfully.').css('color', 'green');
+                            }
+                        }
+                    });
+                });
+            });
+
+        </script>
+
+
+
+
+
+        <footer>
+            <div class="social-icons">
+                <i class="fa fa-envelope" style="font-size:36px"></i>
+                <i class="fa fa-twitter" style="font-size:36px"></i>
+                <i class="fa fa-youtube-play" style="font-size:36px"></i>
+            </div>
+            <div class="developer-info">
+                <p>Site developed by: I,me&Myselflimited</p>
+                <p>Contact: Imemyself@egmail.com</p>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2024 Imeandmyself. All rights reserved.</p>
+            </div>
+        </footer>
+</body>
+
+</html>

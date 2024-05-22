@@ -1,0 +1,74 @@
+.contact {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 30px;
+    margin-top: 30px;
+    background-color: #5b5bd8ac;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(77, 21, 209, 0.975);
+}
+
+.contact h1 {
+    color: #070404;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact label {
+    display: block;
+    margin-bottom: 8px;
+    color: #130a0a;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #5b5bd8ac;
+    border-radius: 5px;
+    background-color: #6b6b9dd3;
+    color: #0b0808;
+    /* White text color */
+}
+
+.contact input[type="text"]::placeholder,
+.contact input[type="email"]::placeholder,
+.contact textarea::placeholder {
+    color: #0e0d0d;
+    /* Placeholder text color */
+}
+
+.contact textarea {
+    resize: none;
+    /* Disable textarea resize */
+    background-color: rgb(246, 244, 250);
+}
+
+.contact button[type="submit"] {
+    background-color: #4caf50;
+    /* Green submit button */
+    color: #ede9e9;
+    /* White text color */
+    padding: 10px 20px;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color */
+}
+
+.contact button[type="submit"]:hover {
+    background-color: #45a049;
+    /* Darker green hover color */
+}
+
+#status {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffc107;
+    border-radius: 5px;
+    color: #333;
+}

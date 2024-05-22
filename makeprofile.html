@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+       /* Container */
+       body {
+    background-color: #4C4CAF;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%236767b4' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%238282b9' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%239b9bc0' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23b3b3c9' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23c8c8d3' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23dcdce0' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23EEE' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+    }
+  
+
+    
+        :root {
+    --primary-color: #007bff; /* Default blue color */
+    --secondary-color: #261818; /* Default dark gray color */
+    --background-light: #6c6cf498; /* Default light blue background */
+    --box-shadow-color: rgba(39, 42, 192, 0.942); /* Default box shadow color */
+  }
+
+  body.dark {
+    background-color: #000000;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23222222' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23444444' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23666666' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23888888' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23aaaaaa' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23cccccc' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23EEE' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+    --primary-color: #BB86FC; /* Adjust primary color for dark mode */
+    --secondary-color: #998c8c; /* Adjust secondary color for dark mode */
+    --background-light: #2c272e; /* Adjust background color for dark mode */
+    --box-shadow-color: rgba(215, 207, 226, 0.971); /* Adjust box shadow color for dark mode */
+   
+  }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+}
+
+/* Form */
+#profileForm {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Choose image button */
+.choose-image-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.choose-image-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Profile image */
+.profile-image {
+    display: block;
+    margin: 0 auto 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+}
+
+/* Profile info */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-info label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.profile-info input,
+.profile-info select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.profile-info input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.profile-info input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form id="profileForm" enctype="multipart/form-data" method="post">
+        <input type="file" id="profileImage" name="profileImage" accept="image/*" onchange="previewImage(event)" style="display: none;">
+        <label for="profileImage" class="choose-image-btn">Choose Profile Image</label>
+        <img src="placeholder.jpg" alt="Profile Picture" id="preview" class="profile-image">
+        <div class="profile-info">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="occupation">Occupation:</label>
+            <input type="text" id="occupation" name="occupation" required><br>
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required><br>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+
+<script>
+    function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var preview = document.getElementById('preview');
+            preview.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    }
+
+    document.getElementById("profileForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting
+
+        var formData = new FormData(this);
+
+        // Send the form data using AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'createprofile.php', true);
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                // Display the response if needed
+                console.log(xhr.responseText);
+                alert(xhr.responseText);
+                window.location.href = 'home.html';
+            } else {
+                alert("An error occurred while submitting the form. Please try again.");
+            }
+        };
+        xhr.send(formData);
+    });
+</script>
+
+</body>
+</html>
